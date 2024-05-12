@@ -5,6 +5,7 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import AddAction from "./src/AddAction";
 import AddSpell from "./src/AddSpell";
 import Icon from "react-native-vector-icons/FontAwesome5";
+import CenterMessage from "./src/CenterMessage";
 
 const Tab = createMaterialBottomTabNavigator();
 const iconSize = 25;
@@ -35,7 +36,7 @@ export default class App extends Component {
         <Tab.Navigator>
           <Tab.Screen
             name="Ações"
-            component={AddAction}
+            component={CenterMessage}
             options={{
               tabBarIcon: ({ color }) => (
                 <Icon name={"running"} color={color} size={iconSize} />
@@ -44,7 +45,7 @@ export default class App extends Component {
           />
           <Tab.Screen
             name="Magias"
-            component={AddAction}
+            component={CenterMessage}
             options={{
               tabBarIcon: ({ color }) => (
                 <Icon name={"magic"} color={color} size={iconSize} />
@@ -53,24 +54,24 @@ export default class App extends Component {
           />
           <Tab.Screen
             name="Adicionar Ação"
-            component={AddAction}
-            initialParams={{ addAction: this.addAction }}
             options={{
               tabBarIcon: ({ color }) => (
                 <Icon name={"plus"} color={color} size={iconSize} />
               ),
             }}
-          />
+          >
+            {() => <AddAction addAction={this.addAction} />}
+          </Tab.Screen>
           <Tab.Screen
             name="Adicionar Magia"
-            component={AddSpell}
-            initialParams={{ addSpell: this.addSpell }}
             options={{
               tabBarIcon: ({ color }) => (
                 <Icon name={"plus"} color={color} size={iconSize} />
               ),
             }}
-          />
+          >
+            {() => <AddSpell addSpell={this.addSpell} />}
+          </Tab.Screen>
         </Tab.Navigator>
       </NavigationContainer>
     );
