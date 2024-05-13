@@ -42,7 +42,7 @@ class AddAction extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.heading}>Adicionar Ação</Text>
+        <Text style={styles.heading}>Ações</Text>
         <TextInput
           placeholder="Nome da Ação"
           onChangeText={(value) => this.setState({ nome: value })}
@@ -71,7 +71,7 @@ class AddAction extends React.Component {
         />
         <TouchableOpacity onPress={this.submit}>
           <View style={styles.button}>
-            <Text style={styles.buttonText}>Add City</Text>
+            <Text style={styles.buttonText}>Adicionar Ação</Text>
           </View>
         </TouchableOpacity>
       </View>
