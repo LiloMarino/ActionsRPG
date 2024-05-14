@@ -34,7 +34,12 @@ export default class App extends Component {
   render() {
     return (
       <NavigationContainer>
-        <Tab.Navigator barStyle={styles.bar} inactiveColor="white" activeColor="white" activeIndicatorStyle={styles.background} >
+        <Tab.Navigator
+          barStyle={styles.bar}
+          inactiveColor="white"
+          activeColor="white"
+          activeIndicatorStyle={styles.background}
+        >
           <Tab.Screen
             name="Ações"
             component={CenterMessage}

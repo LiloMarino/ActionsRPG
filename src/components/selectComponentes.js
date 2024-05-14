@@ -19,7 +19,7 @@ const SelectComponentes = ({
         <BouncyCheckbox
           value={valueVerbal}
           onPress={onPressVerbal}
-          fillColor="#212529"
+          fillColor="#c62b29"
         />
         <Text style={styles.label}>V</Text>
       </View>
@@ -27,7 +27,7 @@ const SelectComponentes = ({
         <BouncyCheckbox
           value={valueSomatico}
           onPress={onPressSomatico}
-          fillColor="#212529"
+          fillColor="#c62b29"
         />
         <Text style={styles.label}>S</Text>
       </View>
@@ -35,7 +35,7 @@ const SelectComponentes = ({
         <BouncyCheckbox
           value={valueMaterial}
           onPress={onPressMaterial}
-          fillColor="#212529"
+          fillColor="#c62b29"
         />
         <Text style={styles.label}>M</Text>
       </View>

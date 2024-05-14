@@ -18,31 +18,50 @@ import styles from "./styles";
 class AddSpell extends React.Component {
   state = {
     nome: "",
-    nivel: null,
-    escola: null,
-    tempo_de_conjuracao: { quantidade: 0, unidade: null },
-    componentes: { verbal: false, somatico: false, material: false },
+    nivel: "",
+    escola: "",
+    tempo_de_conjuracao: { quantidade: 0, unidade: "" },
+    componentes: {
+      verbal: false,
+      somatico: false,
+      material: false,
+      materialTipo: "",
+    },
     alcance: "",
     duracao: {
-      tipo: null,
+      tipo: "",
       concentracao: false,
       ate: false,
       quantidade: 0,
-      unidade: null,
+      unidade: "",
     },
     descricao: "",
   };
 
   submit = () => {
+    const {
+      nome,
+      nivel,
+      escola,
+      tempo_de_conjuracao,
+      componentes,
+      alcance,
+      duracao,
+      descricao,
+    } = this.state;
+
     if (
-      this.state.nome === "" ||
-      this.state.nivel === null ||
-      this.state.escola === null ||
-      this.state.tempo_de_conjuracao.quantidade === 0 ||
-      this.state.tempo_de_conjuracao.unidade === null ||
-      this.state.alcance === "" ||
-      this.state.duracao.tipo === null ||
-      this.state.descricao === ""
+      nome === "" ||
+      nivel === "" ||
+      escola === "" ||
+      tempo_de_conjuracao.quantidade === 0 ||
+      tempo_de_conjuracao.unidade === "" ||
+      (componentes.material && componentes.materialTipo === "") ||
+      alcance === "" ||
+      duracao.tipo === "" ||
+      (duracao.tipo === "Temporária" &&
+        (duracao.quantidade === 0 || duracao.unidade === "")) ||
+      descricao === ""
     ) {
       alert("Preencha todos os campos");
     } else {
@@ -59,17 +78,22 @@ class AddSpell extends React.Component {
       this.props.addSpell(spell);
       this.setState({
         nome: "",
-        nivel: null,
-        escola: null,
-        tempo_de_conjuracao: { quantidade: 0, unidade: null },
-        componentes: { verbal: false, somatico: false, material: false },
+        nivel: "",
+        escola: "",
+        tempo_de_conjuracao: { quantidade: 0, unidade: "" },
+        componentes: {
+          verbal: false,
+          somatico: false,
+          material: false,
+          materialTipo: "",
+        },
         alcance: "",
         duracao: {
-          tipo: null,
+          tipo: "",
           concentracao: false,
           ate: false,
           quantidade: 0,
-          unidade: null,
+          unidade: "",
         },
         descricao: "",
       });

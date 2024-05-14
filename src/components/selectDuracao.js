@@ -34,24 +34,25 @@ const SelectDuracao = ({
             <BouncyCheckbox
               value={valueConcentracao}
               onPress={onPressConcentracao}
-              fillColor="#212529"
+              fillColor="#c62b29"
             />
-            <Text style={styles.label}>Concentração</Text>
+            <Text onPressIn={onPressConcentracao} style={styles.label}>Concentração</Text>
           </View>
           <View style={styles.itemComponent}>
             <BouncyCheckbox
               value={valueAte}
               onPress={onPressAte}
-              fillColor="#212529"
+              fillColor="#c62b29"
             />
-            <Text style={styles.label}>Até</Text>
+            <Text onPressIn={onPressAte} style={styles.label}>Até</Text>
           </View>
         </View>
         <View style={styles.numberSelection}>
           <TextInput
             keyboardType="numeric"
+            defaultValue="0"
             onChangeText={onChangeTextQtd}
-            style={[styles.input, styles.itemSelection]}
+            style={[styles.input, styles.itemSelection, {height: 55}]}
             value={valueQtd}
           />
           <Picker

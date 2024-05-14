@@ -13,8 +13,9 @@ const SelectTempConj = ({
     <View style={styles.numberSelection}>
       <TextInput
         keyboardType="numeric"
+        defaultValue="0"
         onChangeText={onChangeText}
-        style={[styles.input, styles.itemSelection]}
+        style={[styles.input, styles.itemSelection, {height: 55}]}
         value={valueQtd}
       />
       <Picker

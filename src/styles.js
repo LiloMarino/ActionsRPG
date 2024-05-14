@@ -4,28 +4,25 @@ const styles = StyleSheet.create({
   heading: {
     color: "white",
     fontSize: 30,
-    fontFamily: "Segoe UI",
     fontWeight: "500",
-    marginBottom: 10,
+    margin: 20,
     alignSelf: "center",
   },
   label: {
     color: "white",
     fontSize: 16,
-    fontFamily: "Segoe UI",
     fontWeight: "bold",
   },
   section: {
     color: "white",
     fontSize: 20,
-    fontFamily: "Segoe UI",
     fontWeight: "250",
-    marginBottom: 10,
+    margin: 5,
     alignSelf: "flex-start",
   },
   button: {
     height: 50,
-    backgroundColor: "#212529",
+    backgroundColor: "#c62b29",
     justifyContent: "center",
     alignItems: "center",
     margin: 10,
@@ -35,7 +32,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   subContainer: {
-    marginBottom: 10,
+    marginBottom: 20,
   },
   container: {
     margin: 10,
@@ -64,10 +61,10 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
   bar: {
-    backgroundColor: "#212529",
+    backgroundColor: "#c62b29",
   },
   background: {
-    backgroundColor: "#c62b29",
+    backgroundColor: "#212529",
   },
   input: {
     margin: 5,
