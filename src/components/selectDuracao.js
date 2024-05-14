@@ -1,4 +1,4 @@
-import { TextInput, View } from "react-native";
+import { TextInput, Text, View } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 import styles from "../styles";
@@ -15,7 +15,8 @@ const SelectDuracao = ({
   valueUnidade,
   onValueChangeUnidade,
 }) => (
-  <View>
+  <View style={styles.subContainer}>
+    <Text style={styles.section}>Duração</Text>
     <Picker
       selectedValue={valueTipo}
       style={styles.input}
@@ -26,37 +27,51 @@ const SelectDuracao = ({
       <Picker.Item label="Temporária" value="Temporária" />
       <Picker.Item label="Permanente" value="Permanente" />
     </Picker>
-    <BouncyCheckbox
-      value={valueConcentracao}
-      onPress={onPressConcentracao}
-      style={styles.checkbox}
-    />
-    <BouncyCheckbox
-      value={valueAte}
-      onPress={onPressAte}
-      style={styles.checkbox}
-    />
-    <TextInput
-      keyboardType="numeric"
-      onChangeText={onChangeTextQtd}
-      style={styles.input}
-      value={valueQtd}
-    />
-    <Picker
-      selectedValue={valueUnidade}
-      style={styles.input}
-      onValueChange={onValueChangeUnidade}
-    >
-      <Picker.Item label="Selecione a unidade de tempo" value={null} />
-      <Picker.Item label="Turnos" value="Turnos" />
-      <Picker.Item label="Rodadas" value="Rodadas" />
-      <Picker.Item label="Minutos" value="Minutos" />
-      <Picker.Item label="Horas" value="Horas" />
-      <Picker.Item label="Dias" value="Dias" />
-      <Picker.Item label="Semanas" value="Semanas" />
-      <Picker.Item label="Meses" value="Meses" />
-      <Picker.Item label="Anos" value="Anos" />
-    </Picker>
+    {valueTipo === "Temporária" && (
+      <View>
+        <View style={styles.componentSelection}>
+          <View style={styles.itemComponent}>
+            <BouncyCheckbox
+              value={valueConcentracao}
+              onPress={onPressConcentracao}
+              fillColor="#212529"
+            />
+            <Text style={styles.label}>Concentração</Text>
+          </View>
+          <View style={styles.itemComponent}>
+            <BouncyCheckbox
+              value={valueAte}
+              onPress={onPressAte}
+              fillColor="#212529"
+            />
+            <Text style={styles.label}>Até</Text>
+          </View>
+        </View>
+        <View style={styles.numberSelection}>
+          <TextInput
+            keyboardType="numeric"
+            onChangeText={onChangeTextQtd}
+            style={[styles.input, styles.itemSelection]}
+            value={valueQtd}
+          />
+          <Picker
+            selectedValue={valueUnidade}
+            style={[styles.input, styles.itemSelection]}
+            onValueChange={onValueChangeUnidade}
+          >
+            <Picker.Item label="Selecione a unidade de tempo" value={null} />
+            <Picker.Item label="Turnos" value="Turnos" />
+            <Picker.Item label="Rodadas" value="Rodadas" />
+            <Picker.Item label="Minutos" value="Minutos" />
+            <Picker.Item label="Horas" value="Horas" />
+            <Picker.Item label="Dias" value="Dias" />
+            <Picker.Item label="Semanas" value="Semanas" />
+            <Picker.Item label="Meses" value="Meses" />
+            <Picker.Item label="Anos" value="Anos" />
+          </Picker>
+        </View>
+      </View>
+    )}
   </View>
 );
 

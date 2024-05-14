@@ -1,20 +1,31 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  label: {
-    margin: 8,
+  heading: {
     color: "white",
-  },
-  header: {
-    margin: 8,
-    color: "white",
-  },
-  checkbox: {
+    fontSize: 30,
+    fontFamily: "Segoe UI",
+    fontWeight: "500",
+    marginBottom: 10,
     alignSelf: "center",
+  },
+  label: {
+    color: "white",
+    fontSize: 16,
+    fontFamily: "Segoe UI",
+    fontWeight: "bold",
+  },
+  section: {
+    color: "white",
+    fontSize: 20,
+    fontFamily: "Segoe UI",
+    fontWeight: "250",
+    marginBottom: 10,
+    alignSelf: "flex-start",
   },
   button: {
     height: 50,
-    backgroundColor: "#666",
+    backgroundColor: "#212529",
     justifyContent: "center",
     alignItems: "center",
     margin: 10,
@@ -23,19 +34,43 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 18,
   },
-  heading: {
-    color: "white",
-    fontSize: 40,
+  subContainer: {
     marginBottom: 10,
-    alignSelf: "center",
   },
   container: {
-    backgroundColor: "#1976D2",
+    margin: 10,
     flex: 1,
-    justifyContent: "center",
+    display: "flex",
+    flexDirection: "column",
+  },
+  componentSelection: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    margin: 15,
+  },
+  itemComponent: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  numberSelection: {
+    display: "flex",
+    flexDirection: "row",
+    flex: 1,
+    gap: 5,
+    flexWrap: "wrap",
+  },
+  itemSelection: {
+    flexGrow: 1,
+  },
+  bar: {
+    backgroundColor: "#212529",
+  },
+  background: {
+    backgroundColor: "#c62b29",
   },
   input: {
-    margin: 10,
+    margin: 5,
     backgroundColor: "white",
     paddingHorizontal: 8,
     height: 50,

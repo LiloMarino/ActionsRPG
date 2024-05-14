@@ -77,11 +77,11 @@ class AddSpell extends React.Component {
   };
   render() {
     return (
-      <ScrollView>
+      <ScrollView style={styles.background}>
         <View style={styles.container}>
           <Text style={styles.heading}>Adicionar Magia</Text>
-          <View>
-            <Text style={styles.title}>Adicionar Magia</Text>
+          <View style={styles.subContainer}>
+            <Text style={styles.section}>Informações Básicas</Text>
             <TextInput
               placeholder="Nome da Magia"
               onChangeText={(value) => this.setState({ nome: value })}
@@ -117,12 +117,15 @@ class AddSpell extends React.Component {
               }))
             }
           />
-          <TextInput
-            placeholder="Alcance da magia"
-            onChangeText={(value) => this.setState({ alcance: value })}
-            style={styles.input}
-            value={this.state.alcance}
-          />
+          <View style={styles.subContainer}>
+            <Text style={styles.section}>Alcance</Text>
+            <TextInput
+              placeholder="Alcance da magia"
+              onChangeText={(value) => this.setState({ alcance: value })}
+              style={styles.input}
+              value={this.state.alcance}
+            />
+          </View>
           <SelectComponentes
             valueVerbal={this.state.componentes.verbal}
             valueMaterial={this.state.componentes.material}
@@ -199,14 +202,17 @@ class AddSpell extends React.Component {
             valueTipo={this.state.duracao.tipo}
             valueUnidade={this.state.duracao.unidade}
           />
-          <TextInput
-            multiline
-            numberOfLines={4}
-            placeholder="Descrição (Suporta Markdown)"
-            onChangeText={(value) => this.setState({ descricao: value })}
-            style={styles.input}
-            value={this.state.descricao}
-          />
+          <View style={styles.subContainer}>
+            <Text style={styles.section}>Descrição</Text>
+            <TextInput
+              multiline
+              numberOfLines={4}
+              placeholder="Descrição (Suporta Markdown)"
+              onChangeText={(value) => this.setState({ descricao: value })}
+              style={styles.input}
+              value={this.state.descricao}
+            />
+          </View>
           <TouchableOpacity onPress={this.submit}>
             <View style={styles.button}>
               <Text style={styles.buttonText}>Adicionar Magia</Text>
