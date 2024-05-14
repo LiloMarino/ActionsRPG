@@ -38,6 +38,31 @@ class AddSpell extends React.Component {
     descricao: "",
   };
 
+  onChangeSimples = (key, value) => {
+    this.setState({ [key]: value });
+  };
+
+  onChangeComplexo = (parentKey, key, value) => {
+    this.setState((prevState) => ({
+      [parentKey]: {
+        ...prevState[parentKey],
+        [key]: value,
+      },
+    }));
+  };
+
+  onChangeComplexoNumerico = (parentKey, key, value) => {
+    if (isNaN(value)) {
+      value = 0;
+    }
+    this.setState((prevState) => ({
+      [parentKey]: {
+        ...prevState[parentKey],
+        [key]: value,
+      },
+    }));
+  };
+
   submit = () => {
     const {
       nome,
@@ -66,13 +91,14 @@ class AddSpell extends React.Component {
       alert("Preencha todos os campos");
     } else {
       const spell = {
-        nome: this.state.nome,
-        nivel: this.state.nivel,
-        escola: this.state.escola,
-        tempo_de_conjuracao: this.state.tempo_de_conjuracao,
-        alcance: this.state.alcance,
-        duracao: this.state.duracao,
-        descricao: this.state.descricao,
+        nome,
+        nivel,
+        escola,
+        tempo_de_conjuracao,
+        componentes,
+        alcance,
+        duracao,
+        descricao,
         id: String(Random.getRandomBytes(8)),
       };
       this.props.addSpell(spell);
@@ -108,16 +134,16 @@ class AddSpell extends React.Component {
             <Text style={styles.section}>Informações Básicas</Text>
             <TextInput
               placeholder="Nome da Magia"
-              onChangeText={(value) => this.setState({ nome: value })}
+              onChangeText={(value) => this.onChangeSimples("nome", value)}
               style={styles.input}
               value={this.state.nome}
             />
             <SelectNivel
-              onValueChange={(value) => this.setState({ nivel: value })}
+              onValueChange={(value) => this.onChangeSimples("nivel", value)}
               selectedValue={this.state.nivel}
             />
             <SelectEscola
-              onValueChange={(value) => this.setState({ escola: value })}
+              onValueChange={(value) => this.onChangeSimples("escola", value)}
               selectedValue={this.state.escola}
             />
           </View>
@@ -125,27 +151,17 @@ class AddSpell extends React.Component {
             valueQtd={this.state.tempo_de_conjuracao.quantidade}
             valueUnidade={this.state.tempo_de_conjuracao.unidade}
             onValueChange={(value) =>
-              this.setState((prevState) => ({
-                tempo_de_conjuracao: {
-                  ...prevState.tempo_de_conjuracao,
-                  unidade: value,
-                },
-              }))
+              this.onChangeComplexo("tempo_de_conjuracao", "unidade", value)
             }
             onChangeText={(value) =>
-              this.setState((prevState) => ({
-                tempo_de_conjuracao: {
-                  ...prevState.tempo_de_conjuracao,
-                  quantidade: value,
-                },
-              }))
+              this.onChangeComplexoNumerico("tempo_de_conjuracao", "quantidade", value)
             }
           />
           <View style={styles.subContainer}>
             <Text style={styles.section}>Alcance</Text>
             <TextInput
               placeholder="Alcance da magia"
-              onChangeText={(value) => this.setState({ alcance: value })}
+              onChangeText={(value) => this.onChangeSimples("alcance", value)}
               style={styles.input}
               value={this.state.alcance}
             />
@@ -155,70 +171,30 @@ class AddSpell extends React.Component {
             valueMaterial={this.state.componentes.material}
             valueSomatico={this.state.componentes.somatico}
             onPressVerbal={(value) =>
-              this.setState((prevState) => ({
-                componentes: {
-                  ...prevState.componentes,
-                  verbal: value,
-                },
-              }))
+              this.onChangeComplexo("componentes", "verbal", value)
             }
             onPressSomatico={(value) =>
-              this.setState((prevState) => ({
-                componentes: {
-                  ...prevState.componentes,
-                  somatico: value,
-                },
-              }))
+              this.onChangeComplexo("componentes", "somatico", value)
             }
             onPressMaterial={(value) =>
-              this.setState((prevState) => ({
-                componentes: {
-                  ...prevState.componentes,
-                  material: value,
-                },
-              }))
+              this.onChangeComplexo("componentes", "material", value)
             }
           />
           <SelectDuracao
             onChangeTextQtd={(value) =>
-              this.setState((prevState) => ({
-                duracao: {
-                  ...prevState.duracao,
-                  quantidade: value,
-                },
-              }))
+              this.onChangeComplexoNumerico("duracao", "quantidade", value)
             }
             onPressAte={(value) =>
-              this.setState((prevState) => ({
-                duracao: {
-                  ...prevState.duracao,
-                  ate: value,
-                },
-              }))
+              this.onChangeComplexo("duracao", "ate", value)
             }
             onPressConcentracao={(value) =>
-              this.setState((prevState) => ({
-                duracao: {
-                  ...prevState.duracao,
-                  concentracao: value,
-                },
-              }))
+              this.onChangeComplexo("duracao", "concentracao", value)
             }
             onValueChangeTipo={(value) =>
-              this.setState((prevState) => ({
-                duracao: {
-                  ...prevState.duracao,
-                  tipo: value,
-                },
-              }))
+              this.onChangeComplexo("duracao", "tipo", value)
             }
             onValueChangeUnidade={(value) =>
-              this.setState((prevState) => ({
-                duracao: {
-                  ...prevState.duracao,
-                  unidade: value,
-                },
-              }))
+              this.onChangeComplexo("duracao", "unidade", value)
             }
             valueAte={this.state.duracao.ate}
             valueConcentracao={this.state.duracao.concentracao}
@@ -232,7 +208,7 @@ class AddSpell extends React.Component {
               multiline
               numberOfLines={4}
               placeholder="Descrição (Suporta Markdown)"
-              onChangeText={(value) => this.setState({ descricao: value })}
+              onChangeText={(value) => this.onChangeSimples("descricao", value)}
               style={styles.inputDesc}
               value={this.state.descricao}
             />

@@ -51,9 +51,9 @@ const SelectDuracao = ({
           <TextInput
             keyboardType="numeric"
             defaultValue="0"
-            onChangeText={onChangeTextQtd}
+            onChangeText={(text) => onChangeTextQtd(parseInt(text))}
             style={[styles.input, styles.itemSelection, {height: 55}]}
-            value={valueQtd}
+            value={valueQtd.toString()}
           />
           <Picker
             selectedValue={valueUnidade}
