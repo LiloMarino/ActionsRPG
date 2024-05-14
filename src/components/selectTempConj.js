@@ -1,7 +1,13 @@
-import { StyleSheet, View, TextInput } from "react-native";
+import { View, TextInput } from "react-native";
 import { Picker } from "@react-native-picker/picker";
+import styles from "../styles";
 
-const SelectTempConj = ({ valueQtd, valueUnidade, onValueChange, onChangeText }) => (
+const SelectTempConj = ({
+  valueQtd,
+  valueUnidade,
+  onValueChange,
+  onChangeText,
+}) => (
   <View>
     <TextInput
       keyboardType="numeric"
@@ -25,14 +31,5 @@ const SelectTempConj = ({ valueQtd, valueUnidade, onValueChange, onChangeText })
     </Picker>
   </View>
 );
-
-const styles = StyleSheet.create({
-  input: {
-    margin: 10,
-    backgroundColor: "white",
-    paddingHorizontal: 8,
-    height: 50,
-  },
-});
 
 export default SelectTempConj;

@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-export const styles = StyleSheet.create({
+const styles = StyleSheet.create({
   label: {
     margin: 8,
     color: "white",
@@ -41,3 +41,5 @@ export const styles = StyleSheet.create({
     height: 50,
   },
 });
+
+export default styles;

@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
 import { Picker } from "@react-native-picker/picker";
+import styles from "../styles";
 
 const SelectEscola = ({ selectedValue, onValueChange }) => (
   <Picker
@@ -19,14 +19,5 @@ const SelectEscola = ({ selectedValue, onValueChange }) => (
     <Picker.Item label="Transmutação" value="Transmutação" />
   </Picker>
 );
-
-const styles = StyleSheet.create({
-    input: {
-        margin: 10,
-        backgroundColor: "white",
-    paddingHorizontal: 8,
-    height: 50,
-},
-});
 
 export default SelectEscola;

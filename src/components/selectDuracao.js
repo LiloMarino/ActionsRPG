@@ -1,6 +1,7 @@
-import { StyleSheet, TextInput, View } from "react-native";
+import { TextInput, View } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
+import styles from "../styles";
 
 const SelectDuracao = ({
   valueTipo,
@@ -58,14 +59,5 @@ const SelectDuracao = ({
     </Picker>
   </View>
 );
-
-const styles = StyleSheet.create({
-  input: {
-    margin: 10,
-    backgroundColor: "white",
-    paddingHorizontal: 8,
-    height: 50,
-  },
-});
 
 export default SelectDuracao;

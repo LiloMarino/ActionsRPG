@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
 import { Picker } from "@react-native-picker/picker";
+import styles from "../styles";
 
 const SelectNivel = ({ selectedValue, onValueChange }) => (
   <Picker
@@ -31,14 +31,5 @@ const SelectNivel = ({ selectedValue, onValueChange }) => (
     <Picker.Item label="20th" value="20" />
   </Picker>
 );
-
-const styles = StyleSheet.create({
-    input: {
-        margin: 10,
-        backgroundColor: "white",
-    paddingHorizontal: 8,
-    height: 50,
-},
-});
 
 export default SelectNivel;

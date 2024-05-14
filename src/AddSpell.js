@@ -13,6 +13,7 @@ import SelectEscola from "./components/selectEscola";
 import SelectDuracao from "./components/selectDuracao";
 import SelectTempConj from "./components/selectTempConj";
 import SelectComponentes from "./components/selectComponentes";
+import styles from "./styles";
 
 class AddSpell extends React.Component {
   state = {
@@ -78,21 +79,24 @@ class AddSpell extends React.Component {
     return (
       <ScrollView>
         <View style={styles.container}>
-          <Text style={styles.heading}>Magias</Text>
-          <TextInput
-            placeholder="Nome da Magia"
-            onChangeText={(value) => this.setState({ nome: value })}
-            style={styles.input}
-            value={this.state.nome}
-          />
-          <SelectNivel
-            onValueChange={(value) => this.setState({ nivel: value })}
-            selectedValue={this.state.nivel}
-          />
-          <SelectEscola
-            onValueChange={(value) => this.setState({ escola: value })}
-            selectedValue={this.state.escola}
-          />
+          <Text style={styles.heading}>Adicionar Magia</Text>
+          <View>
+            <Text style={styles.title}>Adicionar Magia</Text>
+            <TextInput
+              placeholder="Nome da Magia"
+              onChangeText={(value) => this.setState({ nome: value })}
+              style={styles.input}
+              value={this.state.nome}
+            />
+            <SelectNivel
+              onValueChange={(value) => this.setState({ nivel: value })}
+              selectedValue={this.state.nivel}
+            />
+            <SelectEscola
+              onValueChange={(value) => this.setState({ escola: value })}
+              selectedValue={this.state.escola}
+            />
+          </View>
           <SelectTempConj
             valueQtd={this.state.tempo_de_conjuracao.quantidade}
             valueUnidade={this.state.tempo_de_conjuracao.unidade}
@@ -213,43 +217,5 @@ class AddSpell extends React.Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  label: {
-    margin: 8,
-    color: "white",
-  },
-  checkbox: {
-    alignSelf: "center",
-  },
-  button: {
-    height: 50,
-    backgroundColor: "#666",
-    justifyContent: "center",
-    alignItems: "center",
-    margin: 10,
-  },
-  buttonText: {
-    color: "white",
-    fontSize: 18,
-  },
-  heading: {
-    color: "white",
-    fontSize: 40,
-    marginBottom: 10,
-    alignSelf: "center",
-  },
-  container: {
-    backgroundColor: "#1976D2",
-    flex: 1,
-    justifyContent: "center",
-  },
-  input: {
-    margin: 10,
-    backgroundColor: "white",
-    paddingHorizontal: 8,
-    height: 50,
-  },
-});
 
 export default AddSpell;

@@ -1,5 +1,6 @@
-import { StyleSheet, View, Text } from "react-native";
+import { View, Text } from "react-native";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
+import styles from "../styles";
 
 const SelectComponentes = ({
   valueVerbal,
@@ -31,14 +32,5 @@ const SelectComponentes = ({
     <Text>M</Text>
   </View>
 );
-
-const styles = StyleSheet.create({
-  input: {
-    margin: 10,
-    backgroundColor: "white",
-    paddingHorizontal: 8,
-    height: 50,
-  },
-});
 
 export default SelectComponentes;
