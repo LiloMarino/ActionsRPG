@@ -7,10 +7,7 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
-import { Picker } from "@react-native-picker/picker";
 import * as Random from "expo-random";
-import { colors } from "./theme";
-
 import SelectNivel from "./components/selectNivel";
 import SelectEscola from "./components/selectEscola";
 import SelectDuracao from "./components/selectDuracao";
