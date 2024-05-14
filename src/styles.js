@@ -75,6 +75,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
     height: 50,
   },
+  inputDesc: {
+    margin: 5,
+    backgroundColor: "white",
+    paddingHorizontal: 8,
+  },
 });
 
 export default styles;

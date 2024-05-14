@@ -209,7 +209,7 @@ class AddSpell extends React.Component {
               numberOfLines={4}
               placeholder="Descrição (Suporta Markdown)"
               onChangeText={(value) => this.setState({ descricao: value })}
-              style={styles.input}
+              style={styles.inputDesc}
               value={this.state.descricao}
             />
           </View>
