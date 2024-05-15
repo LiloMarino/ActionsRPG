@@ -9,6 +9,7 @@ const markdownStyle = StyleSheet.create({
   },
   background: {
     backgroundColor: "#fdf1dc",
+    paddingTop: "10px",
   },
   heading1: {
     color: "#822000",
