@@ -77,6 +77,22 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     paddingHorizontal: 8,
   },
+  message: {
+    alignSelf: "center",
+    color: "white",
+    fontSize: 20,
+  },
+  listItem: {
+    backgroundColor: "#343a40",
+    padding: 10,
+    marginVertical: 5,
+    marginHorizontal: 10,
+    borderRadius: 5,
+  },
+  listItemText: {
+    color: "white",
+    fontSize: 18,
+  },
 });
 
 export default styles;

@@ -7,6 +7,7 @@ import AddSpell from "./src/AddSpell";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import CenterMessage from "./src/CenterMessage";
 import styles from "./src/styles";
+import ActionsNavScreen from "./src/ActionsNavScreen";
 
 const Tab = createMaterialBottomTabNavigator();
 const iconSize = 25;
@@ -42,13 +43,16 @@ export default class App extends Component {
         >
           <Tab.Screen
             name="Ações"
-            component={CenterMessage}
             options={{
               tabBarIcon: ({ color }) => (
                 <Icon name={"running"} color={color} size={iconSize} />
               ),
             }}
-          />
+          >
+            {(props) => (
+              <ActionsNavScreen {...props} actions={this.state.actions} />
+            )}
+          </Tab.Screen>
           <Tab.Screen
             name="Magias"
             component={CenterMessage}

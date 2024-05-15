@@ -1,19 +1,19 @@
 import { createStackNavigator } from '@react-navigation/stack'
-import City from './Action'
-import Cities from './Actions'
+import Action from './Action'
+import Actions from './Actions'
 
 
-const CitiesNav = createStackNavigator()
+const ActionsNav = createStackNavigator()
 
 
-const CitiesNavScreen = ({cities, addLocation}) => (
-   <CitiesNav.Navigator >
-     <CitiesNav.Screen name="Cities">
-       { props => <Cities {...props} cities={cities}/> }
-     </CitiesNav.Screen>
-     <CitiesNav.Screen name="City" component={City} />
-   </CitiesNav.Navigator>
+const ActionsNavScreen = ({actions}) => (
+   <ActionsNav.Navigator >
+     <ActionsNav.Screen name="Ações">
+       { props => <Actions {...props} actions={actions}/> }
+     </ActionsNav.Screen>
+     <ActionsNav.Screen name="Action" component={Action} />
+   </ActionsNav.Navigator>
  )
 
 
-export default CitiesNavScreen
+export default ActionsNavScreen
