@@ -24,29 +24,30 @@ export default class App extends Component {
     ],
     spells: [
       {
-        nome: "d",
+        nome: "Alarm",
         nivel: "1",
-        escola: "Conjuração",
+        escola: "Abjuração",
         tempo_de_conjuracao: {
           quantidade: 1,
-          unidade: "Ação Bônus",
+          unidade: "Minutos",
         },
         componentes: {
-          verbal: false,
-          somatico: false,
+          verbal: true,
+          somatico: true,
           material: true,
-          materialTipo: "d",
+          materialTipo: "a tiny bell and a piece of fine silver wire",
         },
-        alcance: "a",
+        alcance: "30 feet",
         duracao: {
           tipo: "Temporária",
-          concentracao: true,
-          ate: true,
-          quantidade: 1,
-          unidade: "Turnos",
+          concentracao: false,
+          ate: false,
+          quantidade: 8,
+          unidade: "Horas",
         },
-        descricao: "a",
-        id: "62,93,67,163,24,84,127,250",
+        descricao:
+          "You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube. Until the spell ends, an alarm alerts you whenever a Tiny or larger creature touches or enters the warded area. When you cast the spell, you can designate creatures that won't set off the alarm. You also choose whether the alarm is mental or audible.\n\nA mental alarm alerts you with a ping in your mind if you are within 1 mile of the warded area. This ping awakens you if you are sleeping.\n\nAn audible alarm produces the sound of a hand bell for 10 seconds within 60 feet.",
+        id: "170,63,11,15,192,3,173,23",
       },
     ],
   };
