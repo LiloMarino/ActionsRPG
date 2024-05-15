@@ -8,6 +8,7 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 import CenterMessage from "./src/CenterMessage";
 import styles from "./src/styles";
 import ActionsNavScreen from "./src/ActionsNavScreen";
+import SpellsNavScreen from "./src/SpellsNavScreen";
 
 const Tab = createMaterialBottomTabNavigator();
 const iconSize = 25;
@@ -21,7 +22,33 @@ export default class App extends Component {
         descricao: "a",
       },
     ],
-    spells: [],
+    spells: [
+      {
+        nome: "d",
+        nivel: "1",
+        escola: "Conjuração",
+        tempo_de_conjuracao: {
+          quantidade: 1,
+          unidade: "Ação Bônus",
+        },
+        componentes: {
+          verbal: false,
+          somatico: false,
+          material: true,
+          materialTipo: "d",
+        },
+        alcance: "a",
+        duracao: {
+          tipo: "Temporária",
+          concentracao: true,
+          ate: true,
+          quantidade: 1,
+          unidade: "Turnos",
+        },
+        descricao: "a",
+        id: "62,93,67,163,24,84,127,250",
+      },
+    ],
   };
 
   addAction = (action) => {
@@ -61,13 +88,16 @@ export default class App extends Component {
           </Tab.Screen>
           <Tab.Screen
             name="Magias"
-            component={CenterMessage}
             options={{
               tabBarIcon: ({ color }) => (
                 <Icon name={"magic"} color={color} size={iconSize} />
               ),
             }}
-          />
+          >
+            {(props) => (
+              <SpellsNavScreen {...props} spells={this.state.spells} />
+            )}
+          </Tab.Screen>
           <Tab.Screen
             name="Adicionar Ação"
             options={{
