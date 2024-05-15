@@ -22,7 +22,7 @@ const SelectDuracao = ({
       style={styles.input}
       onValueChange={onValueChangeTipo}
     >
-      <Picker.Item label="Selecione o tipo de duração" value={null} />
+      <Picker.Item label="Selecione o tipo de duração" value="" />
       <Picker.Item label="Instantânea" value="Instantânea" />
       <Picker.Item label="Temporária" value="Temporária" />
       <Picker.Item label="Permanente" value="Permanente" />
@@ -60,7 +60,7 @@ const SelectDuracao = ({
             style={[styles.input, styles.itemSelection]}
             onValueChange={onValueChangeUnidade}
           >
-            <Picker.Item label="Selecione a unidade de tempo" value={null} />
+            <Picker.Item label="Selecione a unidade de tempo" value="" />
             <Picker.Item label="Turnos" value="Turnos" />
             <Picker.Item label="Rodadas" value="Rodadas" />
             <Picker.Item label="Minutos" value="Minutos" />

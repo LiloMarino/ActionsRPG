@@ -7,7 +7,7 @@ const SelectNivel = ({ selectedValue, onValueChange }) => (
     style={styles.input}
     onValueChange={onValueChange}
   >
-    <Picker.Item label="Selecione o nível da magia" value={null} />
+    <Picker.Item label="Selecione o nível da magia" value="" />
     <Picker.Item label="Cantrip" value="0" />
     <Picker.Item label="1st" value="1" />
     <Picker.Item label="2nd" value="2" />

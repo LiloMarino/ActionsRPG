@@ -154,7 +154,11 @@ class AddSpell extends React.Component {
               this.onChangeComplexo("tempo_de_conjuracao", "unidade", value)
             }
             onChangeText={(value) =>
-              this.onChangeComplexoNumerico("tempo_de_conjuracao", "quantidade", value)
+              this.onChangeComplexoNumerico(
+                "tempo_de_conjuracao",
+                "quantidade",
+                value
+              )
             }
           />
           <View style={styles.subContainer}>
@@ -170,6 +174,7 @@ class AddSpell extends React.Component {
             valueVerbal={this.state.componentes.verbal}
             valueMaterial={this.state.componentes.material}
             valueSomatico={this.state.componentes.somatico}
+            descMaterial={this.state.componentes.materialTipo}
             onPressVerbal={(value) =>
               this.onChangeComplexo("componentes", "verbal", value)
             }
@@ -178,6 +183,9 @@ class AddSpell extends React.Component {
             }
             onPressMaterial={(value) =>
               this.onChangeComplexo("componentes", "material", value)
+            }
+            onChangeTextMaterial={(value) =>
+              this.onChangeComplexo("componentes", "materialTipo", value)
             }
           />
           <SelectDuracao

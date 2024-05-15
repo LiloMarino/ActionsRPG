@@ -59,7 +59,7 @@ class AddAction extends React.Component {
               style={styles.input}
               onValueChange={(value) => this.setState({ custo: value })}
             >
-              <Picker.Item label="Selecione o custo da ação" value={null} />
+              <Picker.Item label="Selecione o custo da ação" value="" />
               <Picker.Item label="1 Ação" value="1 Ação" />
               <Picker.Item label="1 Ação Bônus" value="1 Ação Bônus" />
               <Picker.Item label="1 Reação" value="1 Reação" />

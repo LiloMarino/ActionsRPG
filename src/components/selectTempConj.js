@@ -23,7 +23,7 @@ const SelectTempConj = ({
         style={[styles.input, styles.itemSelection]}
         onValueChange={onValueChange}
       >
-        <Picker.Item label="Selecione o custo" value={null} />
+        <Picker.Item label="Selecione o custo" value="" />
         <Picker.Item label="Ação" value="Ação" />
         <Picker.Item label="Ação Bônus" value="Ação Bônus" />
         <Picker.Item label="Reação" value="Reação" />

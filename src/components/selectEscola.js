@@ -7,7 +7,7 @@ const SelectEscola = ({ selectedValue, onValueChange }) => (
     style={styles.input}
     onValueChange={onValueChange}
   >
-    <Picker.Item label="Selecione a escola da magia" value={null} />
+    <Picker.Item label="Selecione a escola da magia" value="" />
     <Picker.Item label="Abjuração" value="Abjuração" />
     <Picker.Item label="Conjuração" value="Conjuração" />
     <Picker.Item label="Adivinhação" value="Adivinhação" />
