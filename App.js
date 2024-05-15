@@ -1,20 +1,21 @@
-import "react-native-gesture-handler";
 import React, { Component } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import AddAction from "./src/AddAction";
 import AddSpell from "./src/AddSpell";
 import Icon from "react-native-vector-icons/FontAwesome5";
-import CenterMessage from "./src/CenterMessage";
 import styles from "./src/styles";
 import ActionsNavScreen from "./src/ActionsNavScreen";
 import SpellsNavScreen from "./src/SpellsNavScreen";
+import { AppState, View, Image } from "react-native";
 
 const Tab = createMaterialBottomTabNavigator();
 const iconSize = 25;
 
 export default class App extends Component {
   state = {
+    appState: AppState.currentState,
+    isInBackground: false,
     actions: [
       {
         nome: "a",
@@ -52,6 +53,33 @@ export default class App extends Component {
     ],
   };
 
+  componentDidMount() {
+    AppState.addEventListener("change", this.handleAppStateChange);
+    setTimeout(() => {
+      this.setState({ isInBackground: false });
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    AppState.removeEventListener("change", this.handleAppStateChange);
+  }
+
+  handleAppStateChange = (nextAppState) => {
+    if (
+      this.state.appState.match(/inactive|background/) &&
+      nextAppState === "active"
+    ) {
+      // O aplicativo retornou do plano de fundo
+      setTimeout(() => {
+        this.setState({ isInBackground: false });
+      }, 1000);
+    } else {
+      // O aplicativo está indo para o plano de fundo
+      this.setState({ isInBackground: true });
+    }
+    this.setState({ appState: nextAppState });
+  };
+
   addAction = (action) => {
     const actions = this.state.actions;
     actions.push(action);
@@ -67,60 +95,80 @@ export default class App extends Component {
   };
 
   render() {
+    const { isInBackground } = this.state;
     return (
-      <NavigationContainer>
-        <Tab.Navigator
-          barStyle={styles.bar}
-          inactiveColor="white"
-          activeColor="white"
-          activeIndicatorStyle={styles.background}
-        >
-          <Tab.Screen
-            name="Ações"
-            options={{
-              tabBarIcon: ({ color }) => (
-                <Icon name={"running"} color={color} size={iconSize} />
-              ),
+      <View style={{ flex: 1 }}>
+        {isInBackground && (
+          <View
+            style={{
+              backgroundColor: "#000",
+              flex: 1,
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
-            {(props) => (
-              <ActionsNavScreen {...props} actions={this.state.actions} />
-            )}
-          </Tab.Screen>
-          <Tab.Screen
-            name="Magias"
-            options={{
-              tabBarIcon: ({ color }) => (
-                <Icon name={"magic"} color={color} size={iconSize} />
-              ),
-            }}
-          >
-            {(props) => (
-              <SpellsNavScreen {...props} spells={this.state.spells} />
-            )}
-          </Tab.Screen>
-          <Tab.Screen
-            name="Adicionar Ação"
-            options={{
-              tabBarIcon: ({ color }) => (
-                <Icon name={"plus"} color={color} size={iconSize} />
-              ),
-            }}
-          >
-            {() => <AddAction addAction={this.addAction} />}
-          </Tab.Screen>
-          <Tab.Screen
-            name="Adicionar Magia"
-            options={{
-              tabBarIcon: ({ color }) => (
-                <Icon name={"plus"} color={color} size={iconSize} />
-              ),
-            }}
-          >
-            {() => <AddSpell addSpell={this.addSpell} />}
-          </Tab.Screen>
-        </Tab.Navigator>
-      </NavigationContainer>
+            <Image
+              source={require("./assets/DnD-Logo.png")}
+              style={{ width: "50%", resizeMode: 'contain' }}
+            />
+          </View>
+        )}
+        {!isInBackground && (
+          <NavigationContainer>
+            <Tab.Navigator
+              barStyle={styles.bar}
+              inactiveColor="white"
+              activeColor="white"
+              activeIndicatorStyle={styles.background}
+            >
+              <Tab.Screen
+                name="Ações"
+                options={{
+                  tabBarIcon: ({ color }) => (
+                    <Icon name={"running"} color={color} size={iconSize} />
+                  ),
+                }}
+              >
+                {(props) => (
+                  <ActionsNavScreen {...props} actions={this.state.actions} />
+                )}
+              </Tab.Screen>
+              <Tab.Screen
+                name="Magias"
+                options={{
+                  tabBarIcon: ({ color }) => (
+                    <Icon name={"magic"} color={color} size={iconSize} />
+                  ),
+                }}
+              >
+                {(props) => (
+                  <SpellsNavScreen {...props} spells={this.state.spells} />
+                )}
+              </Tab.Screen>
+              <Tab.Screen
+                name="Adicionar Ação"
+                options={{
+                  tabBarIcon: ({ color }) => (
+                    <Icon name={"plus"} color={color} size={iconSize} />
+                  ),
+                }}
+              >
+                {() => <AddAction addAction={this.addAction} />}
+              </Tab.Screen>
+              <Tab.Screen
+                name="Adicionar Magia"
+                options={{
+                  tabBarIcon: ({ color }) => (
+                    <Icon name={"plus"} color={color} size={iconSize} />
+                  ),
+                }}
+              >
+                {() => <AddSpell addSpell={this.addSpell} />}
+              </Tab.Screen>
+            </Tab.Navigator>
+          </NavigationContainer>
+        )}
+      </View>
     );
   }
 }
