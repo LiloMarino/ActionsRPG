@@ -14,7 +14,13 @@ const iconSize = 25;
 
 export default class App extends Component {
   state = {
-    actions: [],
+    actions: [
+      {
+        nome: "a",
+        custo: "1 Ação Bônus",
+        descricao: "a",
+      },
+    ],
     spells: [],
   };
 

@@ -11,7 +11,7 @@ export default class Actions extends React.Component {
 
   render() {
     const { actions } = this.props;
-    console.log("actions", this.props.cities);
+    console.log("actions", this.props.actions);
     return (
       <ScrollView
         style={styles.background}

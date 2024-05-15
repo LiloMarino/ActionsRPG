@@ -1,14 +1,13 @@
-import {
-  View,
-  Text
-} from 'react-native'
+import { ScrollView } from "react-native";
+import Markdown from "react-native-markdown-display";
+import markdownStyle from "./markdownStyle";
 
+const Action = ({ action }) => (
+  <ScrollView style={markdownStyle.background}>
+    <Markdown style={markdownStyle}>
+      {`# ${action.nome}\n---\n${action.descricao}`}
+    </Markdown>
+  </ScrollView>
+);
 
-const City = () => (
-  <View>
-      <Text>Teste Teste Teste</Text>
-  </View>
-)
-
-
-export default City
+export default Action;
