@@ -83,11 +83,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   listItem: {
-    backgroundColor: "#343a40",
-    padding: 10,
-    marginVertical: 5,
-    marginHorizontal: 10,
-    borderRadius: 5,
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderBottomColor: "#4A4A4A",
+    borderBottomWidth: 2,
   },
   listItemText: {
     color: "white",

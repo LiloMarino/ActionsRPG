@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  TouchableWithoutFeedback,
-  ScrollView,
-} from "react-native";
+import { View, Text, TouchableWithoutFeedback, ScrollView } from "react-native";
 import styles from "./styles";
 
 import CenterMessage from "./CenterMessage";
@@ -18,11 +13,14 @@ export default class Actions extends React.Component {
     const { actions } = this.props;
     console.log("actions", this.props.cities);
     return (
-      <ScrollView style={styles.background} contentContainerStyle={[!actions.length && { flex: 1 }]}>
+      <ScrollView
+        style={styles.background}
+        contentContainerStyle={[!actions.length && { flex: 1 }]}
+      >
         <View
           style={[!actions.length && { justifyContent: "center", flex: 1 }]}
         >
-          {!actions.length && <CenterMessage  message="Sem ações salvas!" />}
+          {!actions.length && <CenterMessage message="Sem ações salvas!" />}
           {actions.map((item, index) => (
             <TouchableWithoutFeedback
               onPress={() => this.navigate(item)}
