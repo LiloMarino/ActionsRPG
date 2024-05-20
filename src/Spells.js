@@ -1,5 +1,10 @@
 import React from "react";
-import { View, Text, TouchableWithoutFeedback, SectionList } from "react-native";
+import {
+  View,
+  Text,
+  TouchableWithoutFeedback,
+  SectionList,
+} from "react-native";
 import styles from "./styles/styles";
 
 import CenterMessage from "./CenterMessage";
@@ -17,11 +22,11 @@ export default class Spells extends React.Component {
       }
       sections[level].push(spell); // Adiciona a magia na seção
       return sections;
-    }
+    };
     const grouped = spells.reduce(redutor, {});
 
     return Object.keys(grouped).map((level) => ({
-      title: level === '0' ? 'Cantrip' : `Nível ${level}`,
+      title: level === "0" ? "Cantrip" : `Nível ${level}`,
       data: grouped[level],
     }));
   }
@@ -45,7 +50,11 @@ export default class Spells extends React.Component {
             <Text style={styles.sectionHeaderText}>{title}</Text>
           </View>
         )}
-        ListEmptyComponent={<CenterMessage message="Sem magias salvas!" />}
+        ListEmptyComponent={
+          <View style={{ justifyContent: "center", flex: 1 }}>
+            <CenterMessage message="Sem magias salvas!" />
+          </View>
+        }
         contentContainerStyle={[!spells.length && { flex: 1 }]}
         style={styles.background}
       />
