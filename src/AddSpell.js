@@ -12,7 +12,7 @@ import SelectEscola from "./components/selectEscola";
 import SelectDuracao from "./components/selectDuracao";
 import SelectTempConj from "./components/selectTempConj";
 import SelectComponentes from "./components/selectComponentes";
-import styles from "./styles";
+import styles from "./styles/styles";
 
 class AddSpell extends React.Component {
   state = {

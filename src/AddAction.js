@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import * as Random from "expo-random";
-import styles from "./styles";
+import styles from "./styles/styles";
 
 class AddAction extends React.Component {
   state = {

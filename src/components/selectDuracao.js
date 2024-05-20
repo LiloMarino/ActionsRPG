@@ -1,7 +1,7 @@
 import { TextInput, Text, View } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
-import styles from "../styles";
+import styles from "../styles/styles";
 
 const SelectDuracao = ({
   valueTipo,

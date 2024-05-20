@@ -1,5 +1,5 @@
 import { Picker } from "@react-native-picker/picker";
-import styles from "../styles";
+import styles from "../styles/styles";
 
 const SelectEscola = ({ selectedValue, onValueChange }) => (
   <Picker

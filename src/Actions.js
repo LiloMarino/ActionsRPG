@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, TouchableWithoutFeedback, ScrollView } from "react-native";
-import styles from "./styles";
+import styles from "./styles/styles";
 
 import CenterMessage from "./CenterMessage";
 

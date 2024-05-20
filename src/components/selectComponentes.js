@@ -1,6 +1,6 @@
 import { View, Text, TextInput } from "react-native";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
-import styles from "../styles";
+import styles from "../styles/styles";
 
 const SelectComponentes = ({
   valueVerbal,

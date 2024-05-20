@@ -1,6 +1,6 @@
 import { ScrollView } from "react-native";
 import Markdown from "react-native-markdown-display";
-import markdownStyle from "./markdownStyle";
+import markdownStyle from "./styles/markdownStyle";
 
 const Action = ({ action }) => (
   <ScrollView style={markdownStyle.background}>
