@@ -92,6 +92,14 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 18,
   },
+  sectionHeader: {
+    backgroundColor: "#676569",
+  },
+  sectionHeaderText: {
+    paddingHorizontal: 10,
+    color: "white",
+    fontSize: 14,
+  },
 });
 
 export default styles;

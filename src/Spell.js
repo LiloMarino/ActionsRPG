@@ -38,8 +38,8 @@ const Spell = ({ spell }) => (
   <ScrollView style={markdownStyle.background}>
     <Markdown style={markdownStyle}>
       {`# ${spell.nome}\n*${
-        spell.nivel
-      }º nível ${spell.escola.toLowerCase()}*\n- **Tempo de Conjuração:** ${
+        spell.nivel != "0" ? spell.nivel.concat("º nível") : "Cantrip"
+      } ${spell.escola.toLowerCase()}*\n- **Tempo de Conjuração:** ${
         spell.tempo_de_conjuracao.quantidade
       } ${spell.tempo_de_conjuracao.unidade}\n- **Alcance:** ${
         spell.alcance

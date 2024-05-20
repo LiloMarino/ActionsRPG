@@ -21,7 +21,7 @@ export default class Spells extends React.Component {
     const grouped = spells.reduce(redutor, {});
 
     return Object.keys(grouped).map((level) => ({
-      title: `Nível ${level}`,
+      title: level === '0' ? 'Cantrip' : `Nível ${level}`,
       data: grouped[level],
     }));
   }
