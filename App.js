@@ -8,6 +8,7 @@ import styles from "./src/styles";
 import ActionsNavScreen from "./src/ActionsNavScreen";
 import SpellsNavScreen from "./src/SpellsNavScreen";
 import { AppState, View, Image } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Tab = createMaterialBottomTabNavigator();
 const iconSize = 25;
@@ -53,18 +54,24 @@ export default class App extends Component {
     ],
   };
 
-  componentDidMount() {
+  async componentDidMount() {
     AppState.addEventListener("change", this.handleAppStateChange);
+    try {
+      const actionsFromStorage = await AsyncStorage.getItem("actions");
+      const spellsFromStorage = await AsyncStorage.getItem("spells");
+      if (actionsFromStorage)
+        this.setState({ actions: JSON.parse(actionsFromStorage) });
+      if (spellsFromStorage)
+        this.setState({ spells: JSON.parse(spellsFromStorage) });
+    } catch (error) {
+      console.error("Erro ao carregar os dados", error);
+    }
     setTimeout(() => {
       this.setState({ isInBackground: false });
     }, 1000);
   }
 
-  componentWillUnmount() {
-    AppState.removeEventListener("change", this.handleAppStateChange);
-  }
-
-  handleAppStateChange = (nextAppState) => {
+  handleAppStateChange = async (nextAppState) => {
     if (
       this.state.appState.match(/inactive|background/) &&
       nextAppState === "active"
@@ -76,22 +83,34 @@ export default class App extends Component {
     } else {
       // O aplicativo está indo para o plano de fundo
       this.setState({ isInBackground: true });
+      await this.saveData();
     }
     this.setState({ appState: nextAppState });
   };
 
-  addAction = (action) => {
+  saveData = async () => {
+    try {
+      await AsyncStorage.setItem("actions", JSON.stringify(this.state.actions));
+      await AsyncStorage.setItem("spells", JSON.stringify(this.state.spells));
+    } catch (error) {
+      console.error("Erro ao salvar os dados", error);
+    }
+  };
+
+  addAction = async (action) => {
     const actions = this.state.actions;
     actions.push(action);
     this.setState({ actions });
     console.log("estado do app.js: ", this.state);
+    await this.saveData();
   };
 
-  addSpell = (spell) => {
+  addSpell = async (spell) => {
     const spells = this.state.spells;
     spells.push(spell);
     this.setState({ spells });
     console.log("estado do app.js: ", this.state);
+    await this.saveData();
   };
 
   render() {
@@ -109,7 +128,7 @@ export default class App extends Component {
           >
             <Image
               source={require("./assets/DnD-Logo.png")}
-              style={{ width: "50%", resizeMode: 'contain' }}
+              style={{ width: "50%", resizeMode: "contain" }}
             />
           </View>
         )}
