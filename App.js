@@ -19,6 +19,7 @@ export default class App extends Component {
     isInBackground: false,
     actions: [],
     spells: [],
+    navigationState: null,
   };
 
   async componentDidMount() {
@@ -81,7 +82,7 @@ export default class App extends Component {
   };
 
   render() {
-    const { isInBackground } = this.state;
+    const { isInBackground, navigationState } = this.state;
     return (
       <View style={{ flex: 1 }}>
         {isInBackground && (
@@ -100,7 +101,10 @@ export default class App extends Component {
           </View>
         )}
         {!isInBackground && (
-          <NavigationContainer>
+          <NavigationContainer
+            initialState={navigationState}
+            onStateChange={(state) => this.setState({ navigationState: state })}
+          >
             <Tab.Navigator
               barStyle={styles.bar}
               inactiveColor="white"
