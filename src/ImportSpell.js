@@ -1,4 +1,5 @@
-import spellData from "./data/spells-phb.json";
+import spellData from "../data/spells-phb.json";
+import actionsData from "../data/actions.json";
 
 const transformSpell = (spell) => {
   return {

@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import AddAction from "./src/AddAction";
-import AddSpell from "./src/AddSpell";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import styles from "./src/styles/styles";
 import ActionsNavScreen from "./src/ActionsNavScreen";
 import SpellsNavScreen from "./src/SpellsNavScreen";
-import { AppState, View, Image } from "react-native";
+import { AppState, View, Image, Alert } from "react-native";
 import * as Font from "expo-font";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import OptionsStackScreen from "./src/OptionsNavScreen";
@@ -75,11 +73,17 @@ export default class App extends Component {
     }
   };
 
+  resetData = async () => {
+    console.log(this.state);
+    this.setState({ actions: [], spells: [] });
+    await this.saveData();
+    alert("Dados resetados com sucesso!")
+  };
+
   addAction = async (action) => {
     const actions = this.state.actions;
     actions.push(action);
     this.setState({ actions });
-    console.log("estado do app.js: ", this.state);
     await this.saveData();
   };
 
@@ -87,7 +91,6 @@ export default class App extends Component {
     const spells = this.state.spells;
     spells.push(spell);
     this.setState({ spells });
-    console.log("estado do app.js: ", this.state);
     await this.saveData();
   };
 
@@ -153,7 +156,13 @@ export default class App extends Component {
                   ),
                 }}
               >
-                {() => <OptionsStackScreen addSpell={this.addSpell} addAction={this.addAction} />}
+                {() => (
+                  <OptionsStackScreen
+                    addSpell={this.addSpell}
+                    addAction={this.addAction}
+                    resetData={this.resetData}
+                  />
+                )}
               </Tab.Screen>
             </Tab.Navigator>
           </NavigationContainer>

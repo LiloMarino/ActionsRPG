@@ -13,6 +13,7 @@ import SelectDuracao from "./components/selectDuracao";
 import SelectTempConj from "./components/selectTempConj";
 import SelectComponentes from "./components/selectComponentes";
 import styles from "./styles/styles";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 class AddSpell extends React.Component {
   state = {

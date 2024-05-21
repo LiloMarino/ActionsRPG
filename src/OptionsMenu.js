@@ -1,10 +1,10 @@
 import React from "react";
-import { View, Button, ScrollView, Text } from "react-native";
+import { View, ScrollView, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import styles from "./styles/styles";
 import { TouchableHighlight } from "react-native-gesture-handler";
 
-const OptionsMenu = () => {
+const OptionsMenu = (props) => {
   const navigation = useNavigation();
 
   return (
@@ -19,7 +19,7 @@ const OptionsMenu = () => {
           <Text style={styles.listItemText}>Adicionar Magia</Text>
         </View>
       </TouchableHighlight>
-      <TouchableHighlight>
+      <TouchableHighlight onPress={() => props.resetData()}>
         <View style={styles.listOptions}>
           <Text style={styles.listItemText}>Resetar</Text>
         </View>
