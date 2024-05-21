@@ -1,0 +1,152 @@
+[
+    {
+        "nome": "Ativar um item",
+        "custo": "1 Ação",
+        "descricao": "Ativar alguns itens mágicos exige que o usuário faça algo em particular, como segurar o item e pronunciar uma palavra de comando, ler o item se for um pergaminho ou bebê-lo se for uma poção. A descrição de cada categoria de item ou item individual detalha como um item é ativado. Certos itens usam uma ou mais das seguintes regras relacionadas à sua ativação.\nSe um item requer uma ação para ser ativado, essa ação não é uma função da ação {@Ação Use an Object}, portanto, um recurso como o do ladino {@subclassFeature Fast Hands|Rogue||Thief||3} não pode ser usado para ativar o item.\n\n**Palavra de Comando**\nUma palavra de comando é uma palavra ou frase que deve ser falada de forma audível para o item para operar. Um item mágico que exige que o usuário fale uma palavra de comando não pode ser ativado na área de qualquer efeito que impeça o som, como a área criada pelo feitiço silêncio.\n\n\n**Consumíveis**\nAlguns os itens são usados quando são ativados. Uma poção ou elixir deve ser engolido, ou um óleo aplicado no corpo. A escrita desaparece de um pergaminho quando ele é lido. Uma vez usado, um item consumível perde sua magia e não funciona mais.\n\n\n**Feitiços**\nAlguns itens mágicos permitem ao usuário lançar um feitiço a partir do item, geralmente gastando cargas dele. A magia é lançada no nível de magia e conjurador mais baixo possível, não gasta nenhum dos espaços de magia do usuário e não requer componentes, a menos que a descrição do item diga o contrário. O feitiço usa seu tempo de lançamento, alcance e duração normais, e o usuário do item deve se concentrar se o feitiço exigir {@status concentração}. Certos itens abrem exceções a essas regras, alterando o tempo de lançamento, a duração ou outras partes de um feitiço.\nMuitos itens, como poções, ignoram o lançamento do feitiço e conferem os efeitos do feitiço. Tal item ainda usa a duração do feitiço, a menos que a descrição do item diga o contrário.\nUm item mágico, como certos cajados, pode exigir que você use sua própria habilidade de conjuração ao lançar um feitiço do item. Se você tiver mais de uma habilidade de conjuração, você escolhe qual usar com o item. Se você não tem uma habilidade de conjuração (talvez você seja um ladino com o recurso Usar Dispositivo Mágico), seu modificador de habilidade de conjuração é +0 para o item e seu bônus de proficiência se aplica.\n\n\n**Cargas**\nAlguns itens mágicos possuem cargas que você gasta para ativar suas propriedades. O número de cargas restantes de um item é revelado quando uma magia de identificação é lançada no item ou quando uma criatura se sintoniza com o item. Além disso, quando um item recupera cargas, a criatura sintonizada com esse item aprende quantas cargas ele recuperou.\n\n"
+    },
+    {
+        "nome": "Ataque",
+        "custo": "1 Ação",
+        "descricao": "A ação mais comum a ser realizada em combate é a ação de Ataque, seja você brandindo uma espada, atirando uma flecha de um arco ou brigando com os punhos.\nCom esta ação, você realiza um ataque corpo a corpo ou à distância. Consulte a seção \"{@book Fazendo um Ataque|phb|9|fazendo um ataque}\" para ver as regras que regem os ataques.\nCertos recursos, como o recurso Ataque Extra do lutador, permitem que você faça mais de um ataque com esta ação.\n"
+    },
+    {
+        "nome": "Lançar um feitiço",
+        "custo": "Varia",
+        "descricao": "Conjuradores como magos e clérigos, assim como muitos monstros, têm acesso a feitiços e podem usá-los com grande efeito em combate. Cada feitiço tem um tempo de lançamento, que especifica se o lançador deve usar uma ação, reação, minutos ou mesmo horas para lançar o feitiço. Lançar um feitiço não é, portanto, necessariamente uma ação. A maioria das magias tem um tempo de lançamento de 1 ação, então um conjurador geralmente usa sua ação em combate para lançar tal magia. Consulte {@book capítulo 10|phb|10|lançando um feitiço} para ver as regras sobre lançamento de feitiços.\n"
+    },
+    {
+        "nome": "Suba em uma criatura maior",
+        "custo": "1 Ação",
+        "descricao": "Se uma criatura quiser pular em outra criatura, ela poderá fazê-lo {@Ação grapple||grappling}. No entanto, uma criatura pequena ou média tem poucas chances de conseguir agarrar com sucesso uma criatura enorme ou gigantesca, a menos que a magia conceda poder sobrenatural ao agarrador.\nComo alternativa, um oponente adequadamente grande pode ser tratado como terreno para fins de salto. de costas ou agarrado a um membro. Depois de fazer todos os testes de habilidade necessários para se posicionar e subir na criatura maior, a criatura menor usa sua ação para fazer um teste de Força ({@skill Athletics}) ou Destreza ({@skill Acrobatics}) contestado pela Destreza do alvo ({ @skill Acrobatics}) verificação. Se vencer a disputa, a criatura menor se move com sucesso para o espaço da criatura alvo, a criatura menor se move com o alvo e tem vantagem nas jogadas de ataque contra ela.\nA criatura menor pode se mover dentro do espaço da criatura maior, tratando o espaço como {@quickref terreno difícil||3}. A capacidade da criatura maior de atacar a criatura menor depende da localização da criatura menor e fica a seu critério. A criatura maior pode desalojar a criatura menor com uma ação — derrubando-a, raspando-a contra uma parede ou agarrando-a e jogando-a — fazendo um teste de Força ({@skill Atletismo}) contestado pela Força da criatura menor ({@skill Atletismo}) ou teste de Destreza ({@skill Acrobatics}). A criatura menor escolhe qual habilidade usar.\n"
+    },
+    {
+        "nome": "Dash",
+        "custo": "1 Ação",
+        "descricao": "Ao realizar a ação Correr, você ganha movimento extra para o turno atual. O aumento é igual à sua velocidade, após aplicar quaisquer modificadores. Com uma velocidade de 9 metros, por exemplo, você pode se mover até 18 metros em seu turno se correr.\nQualquer aumento ou diminuição em sua velocidade altera esse movimento adicional na mesma proporção. Se seu deslocamento de 9 metros for reduzido para 4,5 metros, por exemplo, você poderá se mover até 9 metros neste turno se correr.\n"
+    },
+    {
+        "nome": "Desarmar",
+        "custo": "1 Ação",
+        "descricao": "Uma criatura pode usar um ataque com arma para tirar uma arma ou outro item do alcance do alvo. O atacante faz uma jogada de ataque contestada pelo teste de Força ({@skill Athletics}) ou de Destreza ({@skill Acrobatics}) do alvo. Se o atacante vencer a disputa, o ataque não causará nenhum dano ou outro efeito negativo, mas o defensor deixará cair o item.\nO atacante terá desvantagem em sua jogada de ataque se o alvo estiver segurando o item com duas ou mais mãos. O alvo tem vantagem em seu teste de habilidade se for maior que a criatura atacante, ou desvantagem se for menor.\n"
+    },
+    {
+        "nome": "Desengatar",
+        "custo": "1 Ação",
+        "descricao": "Se você realizar a ação Desengajar, seu movimento não provocará ataques de oportunidade pelo resto do turno.\n"
+    },
+    {
+        "nome": "Desviar",
+        "custo": "1 Ação",
+        "descricao": "Ao realizar a ação Esquivar, você se concentra inteiramente em evitar ataques. Até o início do seu próximo turno, qualquer jogada de ataque feita contra você terá desvantagem se você puder ver o atacante e você fizer testes de resistência de Destreza com vantagem. Você perde esse benefício se estiver incapacitado (conforme explicado no apêndice) ou se sua velocidade cair para 0.\n"
+    },
+    {
+        "nome": "Coloque ou retire um escudo",
+        "custo": "1 Ação",
+        "descricao": "O tempo que leva para vestir ou tirar a armadura {@table Entrando e tirando a armadura; Colocar e retirar a armadura|phb|depende da categoria da armadura}. Um {@item escudo|phb} pode ser colocado ou retirado como uma ação.\n"
+    },
+    {
+        "nome": "Concentração final",
+        "custo": "Ação Livre",
+        "descricao": "Se um feitiço precisar ser mantido com {@status concentração}, esse fato aparecerá em sua entrada de Duração e o feitiço especificará por quanto tempo você pode se concentrar nele. Você pode encerrar {@status concentração} a qualquer momento (nenhuma ação é necessária).\n"
+    },
+    {
+        "nome": "Fuja de uma luta",
+        "custo": "1 Ação",
+        "descricao": "Uma criatura {@condition grappled} pode usar sua ação para escapar. Para fazer isso, ele deve ter sucesso em um teste de Força ({@skill Athletics}) ou Destreza ({@skill Acrobatics}) contestado pelo seu teste de Força ({@skill Athletics}).\n"
+    },
+    {
+        "nome": "Agarrar",
+        "custo": "1 Ação",
+        "descricao": "Quando quiser agarrar uma criatura ou lutar com ela, você pode usar a ação {@Ação Attack} para realizar um ataque corpo a corpo especial, um agarrar. Se você conseguir realizar vários ataques com a ação {@Ação Attack}, esse ataque substituirá um deles. O alvo do seu agarrar não deve ser maior que um tamanho maior que você e deve estar ao seu alcance.\nUsando pelo menos uma mão livre, você tenta agarrar o alvo fazendo um teste de agarrar, um teste de Força ({@skill Atletismo}) contestado pelo teste de Força ({@skill Athletics}) ou Destreza ({@skill Acrobatics}) do alvo (o alvo escolhe a habilidade a ser usada). Você obtém sucesso automaticamente se o alvo for {@condition incapacitated}. Se tiver sucesso, você sujeita o alvo à condição {@condition grappled} (veja o apêndice). A condição especifica as coisas que a encerram, e você pode soltar o alvo sempre que quiser (nenhuma ação necessária).\n\n**Movendo um alvo agarrado**\nQuando você se move, você pode arrastar ou carregar a {@condição agarrou} a criatura com você, mas seu deslocamento é reduzido pela metade, a menos que a criatura seja dois ou mais tamanhos menor que você.\n\n"
+    },
+    {
+        "nome": "Surto de Cura",
+        "custo": "1 Ação",
+        "descricao": "Como uma ação, um personagem pode usar um surto de cura e gastar até metade de seus Dados de Vida. Para cada Dado de Vida gasto desta forma, o jogador lança o dado e adiciona o modificador de Constituição do personagem. O personagem recupera pontos de vida iguais ao total. O jogador pode decidir gastar um Dado de Vida adicional após cada jogada.\nUm personagem que usa um surto de cura não pode fazê-lo novamente até que termine um descanso curto ou longo. Sob esta regra opcional, um personagem recupera todos os Dados de Vida gastos no final de um descanso longo. Com um breve descanso, um personagem recupera Dados de Vida iguais ao seu nível dividido por quatro (mínimo de um dado).\n"
+    },
+    {
+        "nome": "Ajuda",
+        "custo": "1 Ação",
+        "descricao": "Você pode ajudar outra criatura na conclusão de uma tarefa. Quando você realiza a ação Ajudar, a criatura que você ajuda ganha vantagem no próximo teste de habilidade que fizer para realizar a tarefa que você está ajudando, desde que ela faça o teste antes do início do seu próximo turno.\nAlternativamente, você pode ajudar um criatura aliada ao atacar uma criatura a até 1,5 metro de você. Você finta, distrai o alvo ou de alguma outra forma forma uma equipe para tornar o ataque do seu aliado mais eficaz. Se o seu aliado atacar o alvo antes do seu próximo turno, a primeira jogada de ataque será feita com vantagem.\n"
+    },
+    {
+        "nome": "Esconder",
+        "custo": "1 Ação",
+        "descricao": "Ao realizar a ação Esconder-se, você faz um teste de Destreza ({@skill Stealth}) na tentativa de se esconder, seguindo as regras em {@book capítulo 7 |phb|7|esconder-se} para se esconder. Se tiver sucesso, você ganha certos benefícios, conforme descrito na seção \"{@book Atacantes e alvos invisíveis|PHB|9|atacantes e alvos invisíveis}\" no Manual do Jogador.\n"
+    },
+    {
+        "nome": "Identifique um feitiço",
+        "custo": "1 Reação",
+        "descricao": "Às vezes, um personagem deseja identificar uma magia que outra pessoa está lançando ou que já foi lançada. Para fazer isso, um personagem pode usar sua reação para identificar um feitiço enquanto ele está sendo lançado, ou pode usar uma ação em seu turno para identificar um feitiço pelo seu efeito após ele ser lançado.\nSe o personagem percebeu o lançamento, o feitiço efeito, ou ambos, o personagem pode fazer um teste de Inteligência ({@skill Arcana}) com a reação ou ação. A CD é igual a 15 + o nível da magia. Se a magia for conjurada como uma magia de classe e o personagem for membro daquela classe, o teste será feito com vantagem. Por exemplo, se o conjurador conjurar uma magia como um clérigo, outro clérigo terá vantagem no teste para identificar a magia. Alguns feitiços não estão associados a nenhuma classe quando são lançados, como quando um monstro usa sua característica Inata de Conjuração.\nEste teste de Inteligência ({@skill Arcana}) representa o fato de que identificar um feitiço requer uma mente rápida e familiaridade com a teoria e a prática do casting. Isto é verdade mesmo para um personagem cuja habilidade de conjuração seja Sabedoria ou Carisma. Ser capaz de lançar feitiços por si só não torna você apto a deduzir exatamente o que os outros estão fazendo quando lançam seus feitiços.\n"
+    },
+    {
+        "nome": "Improvisando uma ação",
+        "custo": "Varia",
+        "descricao": "Seu personagem pode fazer coisas não cobertas pelas ações deste capítulo, como arrombar portas, intimidar inimigos, sentir fraquezas nas defesas mágicas ou pedir uma negociação com um inimigo. Os únicos limites para as ações que você pode tentar são sua imaginação e os valores de habilidade do seu personagem. Veja as descrições dos valores de habilidade em {@book capítulo 7|phb|7|Pontuações de habilidade e modificadores} para se inspirar enquanto você improvisa.\nQuando você descreve uma ação não detalhada em outras partes das regras, o Mestre lhe diz se essa ação é possível e que tipo de teste você precisa fazer, se houver, para determinar o sucesso ou o fracasso.\n"
+    },
+    {
+        "nome": "Marca",
+        "custo": "N/A",
+        "descricao": "Esta opção torna mais fácil para os combatentes corpo a corpo atacarem uns aos outros com ataques de oportunidade.\nQuando uma criatura faz um ataque corpo a corpo, ela também pode marcar seu alvo. Até o final do próximo turno do atacante, qualquer ataque de oportunidade que ele fizer contra o alvo marcado terá vantagem. O ataque de oportunidade não gasta a reação do atacante, mas o atacante não pode realizar o ataque se algo, como a condição {@condition incapacitated} ou o feitiço {@spell shocking grip}, o estiver impedindo de reagir. O atacante está limitado a um ataque de oportunidade por turno.\n"
+    },
+    {
+        "nome": "Ataque de oportunidade",
+        "custo": "1 Reação",
+        "descricao": "Em uma luta, todos estão constantemente atentos para que os inimigos baixem a guarda. Você raramente consegue passar descuidadamente por seus inimigos sem se colocar em perigo; fazer isso provoca um ataque de oportunidade.\nVocê pode fazer um ataque de oportunidade quando uma criatura hostil que você pode ver sai do seu alcance. Para realizar o ataque de oportunidade, você usa sua reação para realizar um ataque corpo a corpo contra a criatura provocadora. O ataque interrompe o movimento da criatura provocadora, ocorrendo logo antes de a criatura sair do seu alcance.\nVocê pode evitar provocar um ataque de oportunidade realizando a ação {@Ação Disengage}. Você também não provoca um ataque de oportunidade quando se teletransporta ou quando alguém ou algo o move sem usar seu movimento, ação ou reação. Por exemplo, você não provoca um ataque de oportunidade se uma explosão o lançar para fora do alcance de um inimigo ou se a gravidade fizer com que você passe por um inimigo.\n"
+    },
+    {
+        "nome": "Outra atividade",
+        "custo": "Varia",
+        "descricao": "Seu turno pode incluir uma variedade de floreios que não exigem nem sua ação nem seu movimento.\nVocê pode se comunicar da maneira que puder, por meio de breves expressões e gestos, durante seu turno.\nVocê também pode interagir com um objeto ou recurso do ambiente gratuitamente, durante seu movimento ou ação. Por exemplo, você pode abrir uma porta durante seu movimento enquanto avança em direção a um inimigo ou pode sacar sua arma como parte da mesma ação que usa para atacar.\nSe quiser interagir com um segundo objeto, você precisará usar sua ação. Alguns itens mágicos e outros objetos especiais sempre exigem uma ação para serem usados, conforme indicado em suas descrições.\nO Mestre pode exigir que você use uma ação para qualquer uma dessas atividades quando precisar de cuidado especial ou quando apresentar um obstáculo incomum. Por exemplo, o Mestre poderia razoavelmente esperar que você usasse uma ação para abrir uma porta emperrada ou girar uma manivela para abaixar uma ponte levadiça.\n\n**Interagindo com objetos ao seu redor**\nAqui estão alguns exemplos dos tipos de coisa que você pode fazer em conjunto com seu movimento e ação:\n\n"
+    },
+    {
+        "nome": "Superação",
+        "custo": "1 Ação",
+        "descricao": "Quando uma criatura tenta se mover através do espaço de uma criatura hostil, o movedor pode tentar forçar sua passagem ultrapassando a criatura hostil. Como uma ação ou ação bônus, o movedor realiza um teste de Força ({@skill Athletics}) contestado pelo teste de Força ({@skill Athletics}) da criatura hostil. A criatura que tenta invadir tem vantagem neste teste se for maior que a criatura hostil, ou desvantagem se for menor. Se o motor vencer a disputa, ele poderá se mover pelo espaço da criatura hostil uma vez neste turno.\n"
+    },
+    {
+        "nome": "Preparar",
+        "custo": "1 Ação",
+        "descricao": "Às vezes você quer saltar sobre um inimigo ou esperar por uma circunstância específica antes de agir. Para fazer isso, você pode realizar a ação Preparar no seu turno, o que lhe permite agir usando sua reação antes do início do seu próximo turno.\nPrimeiro, você decide qual circunstância perceptível irá desencadear sua reação. Em seguida, você escolhe a ação que executará em resposta a esse gatilho ou escolhe aumentar sua velocidade em resposta a ele. Os exemplos incluem 'Se o cultista pisar no alçapão, puxarei a alavanca que o abre' e 'Se o goblin pisar perto de mim, eu me afasto'.\nQuando o gatilho ocorrer, você pode: tome sua reação logo após o gatilho terminar ou ignore o gatilho. Lembre-se de que você pode realizar apenas uma reação por rodada.\nQuando você prepara um feitiço, você o lança normalmente, mas mantém sua energia, que você libera com sua reação quando o gatilho ocorre. Para ser preparado, um feitiço deve ter um tempo de lançamento de 1 ação, e manter a magia do feitiço requer {@status concentração} (explicado em {@book capítulo 10|phb|10|concentração}). Se sua {@status concentração} for quebrada, o feitiço se dissipa sem fazer efeito. Por exemplo, se você estiver {@status concentração||concentrating} no feitiço teia e preparar míssil mágico, seu feitiço teia termina, e se você sofrer dano antes de liberar míssil mágico com sua reação, seu {@status concentração} pode ser quebrado.\nVocê tem até o início do seu próximo turno para usar uma ação preparada.\n"
+    },
+    {
+        "nome": "Procurar",
+        "custo": "1 Ação",
+        "descricao": "Ao realizar a ação Procurar, você dedica sua atenção a encontrar algo. Dependendo da natureza da sua pesquisa, o Mestre pode pedir que você faça um teste de Sabedoria ({@skill Perception}) ou de Inteligência ({@skill Investigation}).\n"
+    },
+    {
+        "nome": "Empurrão",
+        "custo": "1 Ação",
+        "descricao": "Usando a ação {@Ação Attack}, você pode fazer um ataque corpo a corpo especial para empurrar uma criatura, seja para derrubá-la {@condition propenso} ou empurrá-la para longe de você. Se você for capaz de realizar vários ataques com a ação {@Ação Attack}, este ataque substituirá um deles.\nO alvo do seu empurrão não deve ser maior que um tamanho maior que você e deve estar ao seu alcance. Você faz um teste de Força ({@skill Athletics}) contestado pelo teste de Força ({@skill Athletics}) ou Destreza ({@skill Acrobatics}) do alvo (o alvo escolhe a habilidade a ser usada). Você obtém sucesso automaticamente se o alvo for {@condition incapacitated}. Se tiver sucesso, você derruba o alvo {@condition propenso} ou o empurra para 1,5 metro de distância de você.\n"
+    },
+    {
+        "nome": "Empurrar de lado",
+        "custo": "1 Ação",
+        "descricao": "Com esta opção, uma criatura usa o ataque especial {@Ação shove} do {@book Player's Handbook|PHB|9|Shoving a Creature} para forçar um alvo para o lado, em vez de se afastar. O atacante tem desvantagem em seu teste de Força ({@skill Athletics}) quando faz isso. Se o teste for bem-sucedido, o atacante move o alvo 1,5 metro para um espaço diferente ao seu alcance.\n"
+    },
+    {
+        "nome": "Estabilizar uma criatura",
+        "custo": "1 Ação",
+        "descricao": "Você pode usar sua ação para administrar primeiros socorros a uma criatura {@condition inconsciente} e tentar estabilizá-la, o que requer um teste bem-sucedido de Sabedoria CD 10 ({@skill Medicine}).\nUma criatura estável não faz testes de resistência contra a morte , embora tenha 0 pontos de vida, permanece {@condition inconsciente}. A criatura deixa de ser estável e deve começar a fazer testes de resistência contra a morte novamente, se sofrer algum dano. Uma criatura estável que não seja curada recupera 1 ponto de vida após {@dice 1d4} horas.\n"
+    },
+    {
+        "nome": "Tombar",
+        "custo": "1 Ação",
+        "descricao": "Uma criatura pode tentar passar pelo espaço de uma criatura hostil, esquivando-se e passando pelo oponente. Como uma ação ou ação bônus, o acrobata faz um teste de Destreza ({@skill Acrobatics}) contestado pelo teste de Destreza ({@skill Acrobatics}) da criatura hostil. Se o acrobata vencer a disputa, ele poderá se mover pelo espaço da criatura hostil uma vez neste turno.\n"
+    },
+    {
+        "nome": "Combate com duas armas",
+        "custo": "1 Ação Bonus",
+        "descricao": "Quando você executa a ação {@Ação Attack} e ataca com uma arma corpo a corpo leve que está segurando em uma mão, você pode usar uma ação bônus para atacar com uma arma corpo a corpo leve diferente que está segurando na outra mão. Você não adiciona seu modificador de habilidade ao dano do ataque bônus, a menos que esse modificador seja negativo.\nSe qualquer uma das armas tiver a propriedade de arremesso, você pode arremessar a arma, em vez de fazer um ataque corpo a corpo com ela.\n"
+    },
+    {
+        "nome": "Use um objeto",
+        "custo": "1 Ação",
+        "descricao": "Você normalmente interage com um objeto enquanto faz outra coisa, como quando desembainha uma espada como parte de um ataque. Quando um objeto requer sua ação para ser usado, você executa a ação Usar um Objeto. Esta ação também é útil quando você deseja interagir com mais de um objeto no seu turno.\n"
+    },
+    {
+        "nome": "Acordando Alguém",
+        "custo": "1 Ação",
+        "descricao": "Uma criatura que está dormindo naturalmente, em vez de estar em um sono induzido magicamente ou quimicamente, acorda se sofrer algum dano ou se alguém usar uma ação para sacudir ou dar um tapa na criatura para acordá-la. Um ruído alto e repentino, como um grito, um trovão ou um sino tocando, também desperta alguém que está dormindo naturalmente.\nSussurros não perturbam o sono, a menos que a pontuação de Sabedoria passiva ({@skill Perception}) de quem está dormindo seja 20 ou superior e os sussurros estão a até 3 metros de quem está dormindo. A fala em volume normal acorda quem está dormindo se o ambiente estiver silencioso (sem vento, canto de pássaros, grilos, sons de rua ou algo parecido) e se quem está dormindo tiver uma pontuação de Sabedoria passiva ({@skill Perception}) de 15 ou superior.\n"
+    }
+]

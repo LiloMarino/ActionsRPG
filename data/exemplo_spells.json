@@ -1,0 +1,530 @@
+[
+    {
+        "nome": "Respingo de ácido",
+        "nivel": 0,
+        "escola": "Conjuração",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "Ação"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": false,
+            "materialTipo": ""
+        },
+        "alcance": "60 feet",
+        "duracao": {
+            "tipo": "Instantânea",
+            "concentracao": false,
+            "ate": false,
+            "quantidade": 0,
+            "unidade": ""
+        },
+        "descricao": "Você lança uma bolha de ácido. Escolha uma criatura que você possa ver dentro do alcance ou escolha duas criaturas que você possa ver dentro do alcance e que estejam a até 1,5 metro uma da outra. Um alvo deve ser bem sucedido em um teste de resistência de Destreza ou sofrerá {@damage 1d6} de dano ácido.\nO dano deste feitiço aumenta em {@dice 1d6} quando você atinge o 5º nível ({@damage 2d6}), 11º nível ({@damage 3d6) }) e 17º nível ({@damage 4d6}).\n"
+    },
+    {
+        "nome": "Ajuda",
+        "nivel": 2,
+        "escola": "Abjuração",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "Ação"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": true,
+            "materialTipo": "a tiny strip of white cloth"
+        },
+        "alcance": "30 feet",
+        "duracao": {
+            "tipo": "Temporária",
+            "concentracao": false,
+            "ate": false,
+            "quantidade": 8,
+            "unidade": "hour"
+        },
+        "descricao": "Seu feitiço fortalece seus aliados com resistência e determinação. Escolha até três criaturas dentro do alcance. O máximo de pontos de vida e os pontos de vida atuais de cada alvo aumentam em 5 enquanto durar.\n"
+    },
+    {
+        "nome": "Alarme",
+        "nivel": 1,
+        "escola": "Abjuração",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "minute"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": true,
+            "materialTipo": "a tiny bell and a piece of fine silver wire"
+        },
+        "alcance": "30 feet",
+        "duracao": {
+            "tipo": "Temporária",
+            "concentracao": false,
+            "ate": false,
+            "quantidade": 8,
+            "unidade": "hour"
+        },
+        "descricao": "Você define um alarme contra invasões indesejadas. Escolha uma porta, janela ou área dentro do alcance que não seja maior que um cubo de 6 metros. Até que a magia termine, um alarme alertará você sempre que uma criatura Miúda ou maior tocar ou entrar na área protegida. Ao lançar o feitiço, você pode designar criaturas que não dispararão o alarme. Você também escolhe se o alarme é mental ou sonoro.\nUm alarme mental alerta você com um sinal sonoro em sua mente se você estiver a menos de 1,6 km da área protegida. Este sinal desperta você se você estiver dormindo.\nUm alarme sonoro produz o som de uma campainha por 10 segundos em um raio de 18 metros.\n"
+    },
+    {
+        "nome": "Alterar a si mesmo",
+        "nivel": 2,
+        "escola": "Transmutação",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "Ação"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": false,
+            "materialTipo": ""
+        },
+        "alcance": "",
+        "duracao": {
+            "tipo": "Temporária",
+            "concentracao": true,
+            "ate": false,
+            "quantidade": 1,
+            "unidade": "hour"
+        },
+        "descricao": "Você assume uma forma diferente. Ao lançar o feitiço, escolha uma das seguintes opções, cujos efeitos duram pela duração do feitiço. Enquanto o feitiço durar, você pode encerrar uma opção como uma ação para obter os benefícios de outra diferente.\n\n**Adaptação Aquática**\nVocê adapta seu corpo a um ambiente aquático, com guelras brotando e teias crescendo entre os dedos. . Você pode respirar debaixo d’água e ganhar um deslocamento de natação igual ao seu deslocamento de caminhada.\n\n\n**Mudar Aparência**\nVocê transforma sua aparência. Você decide sua aparência, incluindo altura, peso, características faciais, som da sua voz, comprimento do cabelo, coloração e características distintivas, se houver. Você pode aparecer como membro de outra raça, embora nenhuma de suas estatísticas mude. Você também não pode aparecer como uma criatura de tamanho diferente do seu, e sua forma básica permanece a mesma; se você for bípede, não poderá usar esse feitiço para se tornar quadrúpede, por exemplo. A qualquer momento durante a duração do feitiço, você pode usar sua ação para mudar sua aparência desta forma novamente.\n\n\n**Armas Naturais**\nVocê desenvolve garras, presas, espinhos, chifres ou um tipo diferente arma natural de sua escolha. Seus ataques desarmados causam {@damage 1d6} dano de concussão, perfurante ou cortante, conforme apropriado para a arma natural que você escolheu, e você é proficiente com seus ataques desarmados. Finalmente, a arma natural é mágica e você tem um bônus de +1 nas jogadas de ataque e dano que fizer usando-a.\n\n"
+    },
+    {
+        "nome": "Amizade Animal",
+        "nivel": 1,
+        "escola": "Encantamento",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "Ação"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": true,
+            "materialTipo": "a morsel of food"
+        },
+        "alcance": "30 feet",
+        "duracao": {
+            "tipo": "Temporária",
+            "concentracao": false,
+            "ate": false,
+            "quantidade": 4,
+            "unidade": "hour"
+        },
+        "descricao": "Este feitiço permite que você convença uma fera de que você não tem intenção de fazer mal a ela. Escolha uma fera que você possa ver dentro do alcance. Ele deve ver e ouvir você. Se a Inteligência da fera for 4 ou superior, o feitiço falha. Caso contrário, a fera deve ser bem sucedida em um teste de resistência de Sabedoria ou será {@condition encantada} por você durante a duração do feitiço. Se você ou um de seus companheiros ferir o alvo, o feitiço termina.\n"
+    },
+    {
+        "nome": "Mensageiro Animal",
+        "nivel": 2,
+        "escola": "Encantamento",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "Ação"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": true,
+            "materialTipo": "a morsel of food"
+        },
+        "alcance": "30 feet",
+        "duracao": {
+            "tipo": "Temporária",
+            "concentracao": false,
+            "ate": false,
+            "quantidade": 4,
+            "unidade": "hour"
+        },
+        "descricao": "Por meio deste feitiço, você usa um animal para entregar uma mensagem. Escolha uma fera minúscula que você possa ver ao alcance, como um esquilo, um gaio azul ou um morcego. Você especifica um local que deve ter visitado e um destinatário que corresponda a uma descrição geral, como “um homem ou mulher vestido com o uniforme da guarda da cidade” ou “um anão ruivo usando um chapéu pontudo .\" Você também fala uma mensagem de até vinte e cinco palavras. A fera alvo viaja durante a duração do feitiço em direção ao local especificado, cobrindo cerca de 80 quilômetros por 24 horas para um mensageiro voador, ou 40 quilômetros para outros animais.\nQuando o mensageiro chega, ele entrega sua mensagem à criatura que você descreveu. , replicando o som da sua voz. O mensageiro fala apenas com uma criatura que corresponda à descrição que você deu. Se o mensageiro não chegar ao seu destino antes do feitiço terminar, a mensagem será perdida e a fera retornará para onde você lançou o feitiço.\n"
+    },
+    {
+        "nome": "Formas de animais",
+        "nivel": 8,
+        "escola": "Transmutação",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "Ação"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": false,
+            "materialTipo": ""
+        },
+        "alcance": "30 feet",
+        "duracao": {
+            "tipo": "Temporária",
+            "concentracao": true,
+            "ate": false,
+            "quantidade": 4,
+            "unidade": "hour"
+        },
+        "descricao": "Sua magia transforma outros em feras. Escolha qualquer número de criaturas voluntárias que você possa ver dentro do alcance. Você transforma cada alvo na forma de uma {@filter Besta grande ou menor com uma classificação de desafio de 4 ou inferior|bestiary|challenge rating=[&0;&4]|type=beast|size=f;d;t;s; m;l|diversos=!enxame}. Nos turnos subsequentes, você pode usar sua ação para transformar as criaturas afetadas em novas formas.\nA transformação dura a duração de cada alvo ou até que o alvo caia para 0 pontos de vida ou morra. Você pode escolher um formulário diferente para cada alvo. As estatísticas de jogo de um alvo são substituídas pelas estatísticas da fera escolhida, embora o alvo mantenha sua tendência e valores de Inteligência, Sabedoria e Carisma. O alvo assume os pontos de vida de sua nova forma e, quando volta à sua forma normal, retorna ao número de pontos de vida que tinha antes de ser transformado. Se ele reverter como resultado da queda para 0 pontos de vida, qualquer dano excessivo será transferido para sua forma normal. Contanto que o dano excessivo não reduza a forma normal da criatura a 0 pontos de vida, ela não será derrubada {@condição inconsciente}. A criatura está limitada nas ações que pode realizar pela natureza de sua nova forma e não pode falar ou lançar feitiços.\nO equipamento do alvo se funde na nova forma. O alvo não pode ativar, empunhar ou de outra forma se beneficiar de nenhum de seus equipamentos.\n"
+    },
+    {
+        "nome": "Animar Mortos",
+        "nivel": 3,
+        "escola": "Necromancia",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "minute"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": true,
+            "materialTipo": "a drop of blood, a piece of flesh, and a pinch of bone dust"
+        },
+        "alcance": "10 feet",
+        "duracao": {
+            "tipo": "Instantânea",
+            "concentracao": false,
+            "ate": false,
+            "quantidade": 0,
+            "unidade": ""
+        },
+        "descricao": "Este feitiço cria um servo morto-vivo. Escolha uma pilha de ossos ou o cadáver de um humanóide Médio ou Pequeno dentro do alcance. Seu feitiço imbui o alvo com uma imitação de vida, elevando-o a uma criatura morta-viva. O alvo se torna um {@creature esqueleto} se você escolher ossos ou um {@creature zombie} se você escolher um cadáver (o Mestre tem as estatísticas de jogo da criatura).\nEm cada um de seus turnos, você pode usar uma ação bônus para mentalmente comande qualquer criatura que você criou com esta magia se a criatura estiver a até 18 metros de você (se você controlar múltiplas criaturas, você pode comandar uma ou todas elas ao mesmo tempo, emitindo o mesmo comando para cada uma). Você decide qual ação a criatura realizará e para onde ela se moverá durante seu próximo turno, ou pode emitir um comando geral, como guardar uma câmara ou corredor específico. Se você não emitir nenhum comando, a criatura apenas se defenderá contra criaturas hostis. Depois de receber uma ordem, a criatura continua a segui-la até que sua tarefa seja concluída.\nA criatura fica sob seu controle por 24 horas, após o que ela para de obedecer a qualquer comando que você tenha dado. Para manter o controle da criatura por mais 24 horas, você deve lançar esta magia na criatura novamente antes que o período atual de 24 horas termine. Esse uso do feitiço reafirma seu controle sobre até quatro criaturas que você animou com esse feitiço, em vez de animar uma nova.\n"
+    },
+    {
+        "nome": "Animar objetos",
+        "nivel": 5,
+        "escola": "Transmutação",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "Ação"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": false,
+            "materialTipo": ""
+        },
+        "alcance": "120 feet",
+        "duracao": {
+            "tipo": "Temporária",
+            "concentracao": true,
+            "ate": false,
+            "quantidade": 1,
+            "unidade": "minute"
+        },
+        "descricao": "Os objetos ganham vida ao seu comando. Escolha até dez objetos não mágicos dentro do alcance que não estejam sendo usados ​​ou carregados. Alvos médios contam como dois objetos, alvos grandes contam como quatro objetos, alvos enormes contam como oito objetos. Você não pode animar nenhum objeto maior que Enorme. Cada alvo é animado e se torna uma criatura sob seu controle até que a magia termine ou até ser reduzido a 0 pontos de vida.\nComo uma ação bônus, você pode comandar mentalmente qualquer criatura que você criou com esta magia se a criatura estiver a 150 metros de você (se você controla múltiplas criaturas, você pode comandar uma ou todas elas ao mesmo tempo, emitindo o mesmo comando para cada uma delas). Você decide qual ação a criatura realizará e para onde ela se moverá durante seu próximo turno, ou pode emitir um comando geral, como guardar uma câmara ou corredor específico. Se você não emitir nenhum comando, a criatura apenas se defenderá contra criaturas hostis. Uma vez dada uma ordem, a criatura continua a segui-la até que sua tarefa seja concluída.\nUm objeto animado é uma construção com CA, pontos de vida, ataques, Força e Destreza determinados por seu tamanho. Sua Constituição é 10 e sua Inteligência e Sabedoria são 3, e seu Carisma é 1. Seu deslocamento é de 9 metros; se o objeto não tiver pernas ou outros apêndices que possa usar para locomoção, ele terá um deslocamento de vôo de 9 metros e poderá pairar. Se o objeto estiver firmemente preso a uma superfície ou a um objeto maior, como uma corrente aparafusada a uma parede, seu deslocamento será 0. Ele tem visão cega com um raio de 9 metros e fica cego além dessa distância. Quando o objeto animado chega a 0 pontos de vida, ele reverte à sua forma de objeto original e qualquer dano restante é transferido para sua forma de objeto original.\nSe você comandar um objeto para atacar, ele poderá realizar um único ataque corpo a corpo contra uma criatura dentro dele. 5 pés disso. Ele realiza um ataque violento com bônus de ataque e dano de concussão determinados pelo seu tamanho. O Mestre pode decidir que um objeto específico inflige dano cortante ou perfurante com base em sua forma.\n"
+    },
+    {
+        "nome": "Concha Antivida",
+        "nivel": 5,
+        "escola": "Abjuração",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "Ação"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": false,
+            "materialTipo": ""
+        },
+        "alcance": "10 feet",
+        "duracao": {
+            "tipo": "Temporária",
+            "concentracao": true,
+            "ate": false,
+            "quantidade": 1,
+            "unidade": "hour"
+        },
+        "descricao": "Uma barreira cintilante se estende a partir de você em um raio de 3 metros e se move com você, permanecendo centrada em você e protegendo outras criaturas além de mortos-vivos e constructos. A barreira dura enquanto durar.\nA barreira impede que uma criatura afetada passe ou alcance. Uma criatura afetada pode lançar feitiços ou fazer ataques com armas de longo alcance ou de alcance através da barreira.\nSe você se mover de forma que uma criatura afetada seja forçada a passar pela barreira, o feitiço termina.\n"
+    },
+    {
+        "nome": "Campo Antimágico",
+        "nivel": 8,
+        "escola": "Abjuração",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "Ação"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": true,
+            "materialTipo": "a pinch of powdered iron or iron filings"
+        },
+        "alcance": "10 feet",
+        "duracao": {
+            "tipo": "Temporária",
+            "concentracao": true,
+            "ate": false,
+            "quantidade": 1,
+            "unidade": "hour"
+        },
+        "descricao": "Uma esfera invisível de antimagia com 3 metros de raio envolve você. Esta área está divorciada da energia mágica que permeia o multiverso. Dentro da esfera, feitiços não podem ser lançados, criaturas invocadas desaparecem e até mesmo itens mágicos tornam-se mundanos. Até o feitiço terminar, a esfera se move com você, centrada em você.\nFeitiços e outros efeitos mágicos, exceto aqueles criados por um artefato ou uma divindade, são suprimidos na esfera e não podem se projetar nela. Um espaço gasto para conjurar uma magia suprimida é consumido. Enquanto um efeito é suprimido, ele não funciona, mas o tempo que ele passa suprimido conta em relação à sua duração.\n\n**Efeitos direcionados**\nFeitiços e outros efeitos mágicos, como {@spell magic míssil} e { @spell charm person}, que tenha como alvo uma criatura ou objeto na esfera, não tem efeito nesse alvo.\n\n\n**Áreas de Magia**\nA área de outro feitiço ou efeito mágico, como {@ feitiço bola de fogo}, não pode se estender para a esfera. Se a esfera se sobrepõe a uma área de magia, a parte da área coberta pela esfera é suprimida. Por exemplo, as chamas criadas por uma parede de fogo são suprimidas dentro da esfera, criando uma lacuna na parede se a sobreposição for grande o suficiente.\n\n\n**Feitiços**\nQualquer feitiço ativo ou outro efeito mágico no uma criatura ou objeto na esfera é suprimido enquanto a criatura ou objeto estiver nela.\n\n\n**Itens Mágicos**\nAs propriedades e poderes dos itens mágicos são suprimidos na esfera. Por exemplo, uma espada longa +1 na esfera funciona como uma espada longa não mágica.\nAs propriedades e poderes de uma arma mágica são suprimidos se ela for usada contra um alvo na esfera ou empunhada por um atacante na esfera. Se uma arma mágica ou uma munição mágica deixar totalmente a esfera (por exemplo, se você disparar uma flecha mágica ou lançar uma lança mágica em um alvo fora da esfera), a magia do item deixa de ser suprimida assim que for saídas.\n\n\n**Viagem Mágica**\nTeletransporte e viagem planar não funcionam na esfera, seja a esfera o destino ou o ponto de partida para tal viagem mágica. Um portal para outro local, mundo ou plano de existência, bem como uma abertura para um espaço extradimensional, como aquele criado pelo feitiço truque da corda, fecha temporariamente enquanto estiver na esfera.\n\n\n**Criaturas e Objetos **\nUma criatura ou objeto invocado ou criado por magia desaparece temporariamente da existência na esfera. Tal criatura reaparece instantaneamente quando o espaço que a criatura ocupava não estiver mais dentro da esfera.\n\n\n**Dispel Magic**\nFeitiços e efeitos mágicos como {@spell dispel magic} não têm efeito na esfera. Da mesma forma, as esferas criadas por diferentes feitiços {@spell antimagic field} não se anulam.\n\n"
+    },
+    {
+        "nome": "Antipatia/Simpatia",
+        "nivel": 8,
+        "escola": "Encantamento",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "hour"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": true,
+            "materialTipo": "either a lump of alum soaked in vinegar for the antipathy effect or a drop of honey for the sympathy effect"
+        },
+        "alcance": "60 feet",
+        "duracao": {
+            "tipo": "Temporária",
+            "concentracao": false,
+            "ate": false,
+            "quantidade": 0,
+            "unidade": "day"
+        },
+        "descricao": "Esta magia atrai ou repele criaturas de sua escolha. Você tem como alvo algo dentro do alcance, seja um objeto ou criatura Enorme ou menor ou uma área que não seja maior que um cubo de 60 metros. Em seguida, especifique um tipo de criatura inteligente, como dragões vermelhos, goblins ou vampiros. Você investe no alvo uma aura que atrai ou repele as criaturas especificadas durante o período. Escolha antipatia ou simpatia como efeito da aura.\n\n**Antipatia**\nO encantamento faz com que criaturas do tipo que você designou sintam um desejo intenso de deixar a área e evitar o alvo. Quando tal criatura puder ver o alvo ou chegar a 18 metros dele, a criatura deve ser bem sucedida em um teste de resistência de Sabedoria ou ficará {@condition assustada}. A criatura permanece {@condition assustada} enquanto puder ver o alvo ou estiver a até 18 metros dele. Enquanto {@condition assustada} pelo alvo, a criatura deve usar seu movimento para se mover para o local seguro mais próximo, de onde não possa ver o alvo. Se a criatura se mover a mais de 18 metros do alvo e não puder vê-lo, a criatura não estará mais {@condition assustada}, mas se tornará {@condition assustada} novamente se recuperar a visão do alvo ou se mover dentro de 60 metros. pés dele.\n\n\n**Simpatia**\nO encantamento faz com que as criaturas especificadas sintam um desejo intenso de se aproximar do alvo enquanto estiverem a 18 metros dele ou forem capazes de vê-lo. Quando tal criatura puder ver o alvo ou chegar a até 18 metros dele, a criatura deve ser bem sucedida em um teste de resistência de Sabedoria ou usar seu movimento em cada um de seus turnos para entrar na área ou se mover ao alcance do alvo. Quando a criatura fizer isso, ela não poderá se afastar voluntariamente do alvo.\nSe o alvo causar dano ou de outra forma causar dano a uma criatura afetada, a criatura afetada pode fazer um teste de resistência de Sabedoria para encerrar o efeito, conforme descrito abaixo.\n \n\n**Terminando o Efeito**\nSe uma criatura afetada terminar seu turno enquanto não estiver a 18 metros do alvo ou não for capaz de vê-lo, a criatura realiza um teste de resistência de Sabedoria. Se obtiver sucesso, a criatura não é mais afetada pelo alvo e reconhece o sentimento de repugnância ou atração como mágico. Além disso, uma criatura afetada pelo feitiço pode realizar outro teste de resistência de Sabedoria a cada 24 horas enquanto o feitiço persistir.\n\nUma criatura que obtiver sucesso no teste de resistência contra este efeito fica imune a ele por 1 minuto, após o qual ela pode ser afetada novamente. .\n"
+    },
+    {
+        "nome": "Olho Arcano",
+        "nivel": 4,
+        "escola": "Adivinhação",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "Ação"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": true,
+            "materialTipo": "a bit of bat fur"
+        },
+        "alcance": "30 feet",
+        "duracao": {
+            "tipo": "Temporária",
+            "concentracao": true,
+            "ate": false,
+            "quantidade": 1,
+            "unidade": "hour"
+        },
+        "descricao": "Você cria um olho mágico invisível dentro do alcance que paira no ar durante a duração.\nVocê recebe mentalmente informações visuais do olho, que tem visão normal e {@sense darkvision} até 9 metros. O olho pode olhar em todas as direções.\nCom uma ação, você pode mover o olho até 9 metros em qualquer direção. Não há limite para o quão longe de você o olho pode se mover, mas ele não pode entrar em outro plano de existência. Uma barreira sólida bloqueia o movimento do olho, mas ele pode passar por uma abertura de até 2,5 cm de diâmetro.\n"
+    },
+    {
+        "nome": "Portão Arcano",
+        "nivel": 6,
+        "escola": "Conjuração",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "Ação"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": false,
+            "materialTipo": ""
+        },
+        "alcance": "500 feet",
+        "duracao": {
+            "tipo": "Temporária",
+            "concentracao": true,
+            "ate": false,
+            "quantidade": 0,
+            "unidade": "minute"
+        },
+        "descricao": "Você cria portais de teletransporte vinculados que permanecem abertos durante todo o período. Escolha dois pontos no chão que você possa ver, um ponto a até 3 metros de você e um ponto a 150 metros de você. Um portal circular, com 3 metros de diâmetro, se abre sobre cada ponto. Se o portal se abrir no espaço ocupado por uma criatura, o feitiço falha e o lançamento é perdido.\nOs portais são anéis brilhantes bidimensionais cheios de névoa, pairando a centímetros do chão e perpendiculares a ele nos pontos que você escolher. . Um anel é visível apenas de um lado (à sua escolha), que é o lado que funciona como portal.\nQualquer criatura ou objeto que entre no portal sai do outro portal como se os dois fossem adjacentes um ao outro; passar por um portal do lado não-portal não tem efeito. A névoa que preenche cada portal é opaca e bloqueia a visão através dele. No seu turno, você pode girar os anéis como uma ação bônus para que o lado ativo fique voltado em uma direção diferente.\n"
+    },
+    {
+        "nome": "Bloqueio Arcano",
+        "nivel": 2,
+        "escola": "Abjuração",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "Ação"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": true,
+            "materialTipo": "gold dust worth at least 25 gp, which the spell consumes"
+        },
+        "alcance": "",
+        "duracao": {
+            "tipo": "permanent",
+            "concentracao": false,
+            "ate": false,
+            "quantidade": 0,
+            "unidade": ""
+        },
+        "descricao": "Você toca uma porta, janela, portão, baú ou outra entrada fechada e ela fica trancada enquanto durar. Você e as criaturas que você designou ao lançar esta magia podem abrir o objeto normalmente. Você também pode definir uma senha que, quando falada a até 1,5 metro do objeto, suprime esse feitiço por 1 minuto. Caso contrário, fica intransponível até que seja quebrado ou o feitiço seja dissipado ou suprimido. Lançar {@spell knock} no objeto suprime {@spell arcane lock} por 10 minutos.\nEnquanto afetado por este feitiço, o objeto é mais difícil de quebrar ou abrir à força; a CD para quebrá-lo ou arrombar qualquer fechadura aumenta em 10.\n"
+    },
+    {
+        "nome": "Armadura de Agathys",
+        "nivel": 1,
+        "escola": "Abjuração",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "Ação"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": true,
+            "materialTipo": "a cup of water"
+        },
+        "alcance": "",
+        "duracao": {
+            "tipo": "Temporária",
+            "concentracao": false,
+            "ate": false,
+            "quantidade": 1,
+            "unidade": "hour"
+        },
+        "descricao": "Uma força mágica protetora envolve você, manifestando-se como uma geada espectral que cobre você e seu equipamento. Você ganha 5 pontos de vida temporários durante a duração. Se uma criatura atingir você com um ataque corpo a corpo enquanto você tiver esses pontos de vida, a criatura sofrerá 5 de dano de frio.\n"
+    },
+    {
+        "nome": "Armas de Hadar",
+        "nivel": 1,
+        "escola": "Conjuração",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "Ação"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": false,
+            "materialTipo": ""
+        },
+        "alcance": "10 feet",
+        "duracao": {
+            "tipo": "Instantânea",
+            "concentracao": false,
+            "ate": false,
+            "quantidade": 0,
+            "unidade": ""
+        },
+        "descricao": "Você invoca o poder de Hadar, o Dark Hunger. Gavinhas de energia negra irrompem de você e atingem todas as criaturas a até 3 metros de você. Cada criatura naquela área deve fazer um teste de resistência de Força. Se falhar na resistência, o alvo sofre {@damage 2d6} de dano necrótico e não pode realizar reações até o próximo turno. Se obtiver sucesso, a criatura sofre metade do dano, mas não sofre nenhum outro efeito.\n"
+    },
+    {
+        "nome": "Projeção astral",
+        "nivel": 9,
+        "escola": "Necromancia",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "hour"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": true,
+            "materialTipo": "for each creature you affect with this spell, you must provide one jacinth worth at least 1,000 gp and one ornately carved bar of silver worth at least 100 gp, all of which the spell consumes"
+        },
+        "alcance": "10 feet",
+        "duracao": {
+            "tipo": "Especial",
+            "concentracao": false,
+            "ate": false,
+            "quantidade": 0,
+            "unidade": ""
+        },
+        "descricao": "Você e até oito criaturas voluntárias dentro do alcance projetam seus corpos astrais no Plano Astral (a magia falha e a conjuração é desperdiçada se você já estiver naquele plano). O corpo material que você deixa para trás é {@condição inconsciente} e em estado de animação suspensa, não precisa de comida ou ar e não envelhece.\nSeu corpo astral se assemelha à sua forma mortal em quase todos os aspectos, reproduzindo seu jogo estatísticas e posses. A principal diferença é a adição de um cordão prateado que se estende entre as omoplatas e segue atrás de você, tornando-se invisível após 30 centímetros. Este cordão é a sua ligação ao seu corpo material. Contanto que a corda permaneça intacta, você poderá encontrar o caminho de casa. Se o cordão for cortado - algo que só pode acontecer quando um efeito afirma especificamente que isso acontece - sua alma e seu corpo serão separados, matando você instantaneamente.\nSua forma astral pode viajar livremente através do Plano Astral e pode passar por portais que levam a qualquer outro avião. Se você entrar em um novo plano ou retornar ao plano em que estava quando lançou este feitiço, seu corpo e seus pertences serão transportados ao longo do cordão prateado, permitindo que você entre novamente em seu corpo ao entrar no novo plano. Sua forma astral é uma encarnação separada. Qualquer dano ou outros efeitos que se apliquem a ele não têm efeito em seu corpo físico, nem persistem quando você retorna a ele.\nO feitiço termina para você e seus companheiros quando você usa sua ação para dispensá-lo. Quando o feitiço termina, a criatura afetada retorna ao seu corpo físico e desperta.\nO feitiço também pode terminar mais cedo para você ou um de seus companheiros. Um feitiço {@spell dispel magic} bem-sucedido usado contra um corpo astral ou físico encerra o feitiço daquela criatura. Se o corpo original de uma criatura ou sua forma astral chegar a 0 pontos de vida, a magia termina para aquela criatura. Se o feitiço terminar e o cordão prateado estiver intacto, o cordão puxa a forma astral da criatura de volta ao seu corpo, encerrando seu estado de animação suspensa.\nSe você retornar ao seu corpo prematuramente, seus companheiros permanecerão em suas formas astrais e deverão encontrar seu próprio caminho de volta para seus corpos, geralmente caindo para 0 pontos de vida.\n"
+    },
+    {
+        "nome": "Augúrio",
+        "nivel": 2,
+        "escola": "Adivinhação",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "minute"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": true,
+            "material": true,
+            "materialTipo": "specially marked sticks, bones, or similar tokens worth at least 25 gp"
+        },
+        "alcance": "",
+        "duracao": {
+            "tipo": "Instantânea",
+            "concentracao": false,
+            "ate": false,
+            "quantidade": 0,
+            "unidade": ""
+        },
+        "descricao": "Ao lançar bastões incrustados de pedras preciosas, rolar ossos de dragão, dispor cartas ornamentadas ou empregar alguma outra ferramenta de adivinhação, você recebe um presságio de uma entidade de outro mundo sobre os resultados de um curso de ação específico que você planeja realizar nos próximos 30 minutos. . O Mestre escolhe entre os seguintes presságios possíveis:\nO feitiço não leva em consideração quaisquer possíveis circunstâncias que possam alterar o resultado, como o lançamento de feitiços adicionais ou a perda ou ganho de um companheiro.\nSe você lançar o feitiço dois ou mais vezes antes de completar seu próximo descanso longo, há uma chance cumulativa de {@chance 25|||Leitura aleatória!|Leitura regular} para cada lançamento após a primeira vez que você obtiver uma leitura aleatória. O Mestre faz essa rolagem em segredo.\n"
+    },
+    {
+        "nome": "Aura da Vida",
+        "nivel": 4,
+        "escola": "Abjuração",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "Ação"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": false,
+            "material": false,
+            "materialTipo": ""
+        },
+        "alcance": "30 feet",
+        "duracao": {
+            "tipo": "Temporária",
+            "concentracao": true,
+            "ate": false,
+            "quantidade": 0,
+            "unidade": "minute"
+        },
+        "descricao": "A energia que preserva a vida irradia de você em uma aura com um raio de 9 metros. Até o feitiço terminar, a aura se move com você, centrada em você. Cada criatura não hostil na aura (incluindo você) tem resistência a dano necrótico e seu máximo de pontos de vida não pode ser reduzido. Além disso, uma criatura viva não hostil recupera 1 ponto de vida quando inicia seu turno na aura com 0 pontos de vida.\n"
+    },
+    {
+        "nome": "Aura de Pureza",
+        "nivel": 4,
+        "escola": "Abjuração",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "Ação"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": false,
+            "material": false,
+            "materialTipo": ""
+        },
+        "alcance": "30 feet",
+        "duracao": {
+            "tipo": "Temporária",
+            "concentracao": true,
+            "ate": false,
+            "quantidade": 0,
+            "unidade": "minute"
+        },
+        "descricao": "A energia purificadora irradia de você em uma aura com um raio de 9 metros. Até o feitiço terminar, a aura se move com você, centrada em você. Cada criatura não hostil na aura (incluindo você) não pode ficar doente, tem resistência a dano de veneno e tem vantagem em testes de resistência contra efeitos que causem qualquer uma das seguintes condições: {@condition blinded}, {@condition charmed}, {@condição ensurdecida}, {@condição assustada}, {@condição paralisada}, {@condição envenenada} e {@condição atordoada}.\n"
+    },
+    {
+        "nome": "Aura de Vitalidade",
+        "nivel": 3,
+        "escola": "Evocação",
+        "tempo_de_conjuracao": {
+            "quantidade": 1,
+            "unidade": "Ação"
+        },
+        "componentes": {
+            "verbal": true,
+            "somatico": false,
+            "material": false,
+            "materialTipo": ""
+        },
+        "alcance": "30 feet",
+        "duracao": {
+            "tipo": "Temporária",
+            "concentracao": true,
+            "ate": false,
+            "quantidade": 1,
+            "unidade": "minute"
+        },
+        "descricao": "A energia curativa irradia de você em uma aura com um raio de 9 metros. Até o feitiço terminar, a aura se move com você, centrada em você. Você pode usar uma ação bônus para fazer com que uma criatura na aura (incluindo você) recupere {@dice 2d6} pontos de vida.\n"
+    }
+]

@@ -39,7 +39,6 @@ export default class App extends Component {
       const spellsFromStorage = await AsyncStorage.getItem("spells");
       if (actionsFromStorage)
         this.setState({ actions: JSON.parse(actionsFromStorage) });
-        this.setState({ actions: Base });
       if (spellsFromStorage)
         this.setState({ spells: JSON.parse(spellsFromStorage) });
     } catch (error) {
