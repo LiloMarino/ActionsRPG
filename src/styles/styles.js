@@ -88,6 +88,12 @@ const styles = StyleSheet.create({
     borderBottomColor: "#4A4A4A",
     borderBottomWidth: 2,
   },
+  listItem2: {
+    paddingVertical: 25,
+    paddingHorizontal: 15,
+    borderBottomColor: "#4A4A4A",
+    borderBottomWidth: 2,
+  },
   listItemText: {
     color: "white",
     fontSize: 18,

@@ -10,6 +10,7 @@ import SpellsNavScreen from "./src/SpellsNavScreen";
 import { AppState, View, Image } from "react-native";
 import * as Font from "expo-font";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import OptionsStackScreen from "./src/OptionsNavScreen";
 
 const Tab = createMaterialBottomTabNavigator();
 const iconSize = 25;
@@ -145,24 +146,14 @@ export default class App extends Component {
                 )}
               </Tab.Screen>
               <Tab.Screen
-                name="Adicionar Ação"
+                name="Opções"
                 options={{
                   tabBarIcon: ({ color }) => (
-                    <Icon name={"plus"} color={color} size={iconSize} />
+                    <Icon name={"list"} color={color} size={iconSize} />
                   ),
                 }}
               >
-                {() => <AddAction addAction={this.addAction} />}
-              </Tab.Screen>
-              <Tab.Screen
-                name="Adicionar Magia"
-                options={{
-                  tabBarIcon: ({ color }) => (
-                    <Icon name={"plus"} color={color} size={iconSize} />
-                  ),
-                }}
-              >
-                {() => <AddSpell addSpell={this.addSpell} />}
+                {() => <OptionsStackScreen addSpell={this.addSpell} addAction={this.addAction} />}
               </Tab.Screen>
             </Tab.Navigator>
           </NavigationContainer>

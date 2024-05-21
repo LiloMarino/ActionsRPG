@@ -24,7 +24,7 @@ const SpellsNavScreen = ({ spells }) => (
         headerTintColor: "#fff",
       })}
     >
-      { props => <Spell {...props} spell={props.route.params.spell}/> }
+      {(props) => <Spell {...props} spell={props.route.params.spell} />}
     </SpellsNav.Screen>
   </SpellsNav.Navigator>
 );
