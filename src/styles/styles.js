@@ -92,6 +92,9 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 18,
   },
+  listItemMiniText: {
+    color: "#9d9d9d",
+  },
   sectionHeader: {
     backgroundColor: "#676569",
   },

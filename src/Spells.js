@@ -42,6 +42,7 @@ export default class Spells extends React.Component {
           <TouchableWithoutFeedback onPress={() => this.navigate(item)}>
             <View style={styles.listItem}>
               <Text style={styles.listItemText}>{item.nome}</Text>
+              <Text style={styles.listItemMiniText}>{item.tempo_de_conjuracao.quantidade} {item.tempo_de_conjuracao.unidade}</Text>
             </View>
           </TouchableWithoutFeedback>
         )}

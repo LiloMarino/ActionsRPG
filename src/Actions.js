@@ -28,6 +28,7 @@ export default class Actions extends React.Component {
             >
               <View style={styles.listItem}>
                 <Text style={styles.listItemText}>{item.nome}</Text>
+                <Text style={styles.listItemMiniText}>{item.custo}</Text>
               </View>
             </TouchableWithoutFeedback>
           ))}
