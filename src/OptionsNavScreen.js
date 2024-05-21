@@ -15,7 +15,7 @@ const OptionNavScreen = (props) => (
         headerTintColor: "#fff",
       }}
     >
-      {() => <OptionsMenu resetData={props.resetData} />}
+      {() => <OptionsMenu resetData={props.resetData} importData={props.importData} />}
     </OptionNav.Screen>
     <OptionNav.Screen
       name="Add Action"

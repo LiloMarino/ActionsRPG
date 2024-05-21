@@ -9,6 +9,8 @@ import { AppState, View, Image, Alert } from "react-native";
 import * as Font from "expo-font";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import OptionsStackScreen from "./src/OptionsNavScreen";
+import ExemploActions from "./data/exemplo_actions.json"
+import ExemploSpells from "./data/exemplo_spells.json"
 
 const Tab = createMaterialBottomTabNavigator();
 const iconSize = 25;
@@ -37,6 +39,7 @@ export default class App extends Component {
       const spellsFromStorage = await AsyncStorage.getItem("spells");
       if (actionsFromStorage)
         this.setState({ actions: JSON.parse(actionsFromStorage) });
+        this.setState({ actions: Base });
       if (spellsFromStorage)
         this.setState({ spells: JSON.parse(spellsFromStorage) });
     } catch (error) {
@@ -77,7 +80,13 @@ export default class App extends Component {
     console.log(this.state);
     this.setState({ actions: [], spells: [] });
     await this.saveData();
-    alert("Dados resetados com sucesso!")
+    alert("Dados resetados com sucesso!");
+  };
+
+  importData = () => {
+    const spells = ExemploSpells;
+    const actions = ExemploActions;
+    this.setState({ actions: actions, spells: spells });
   };
 
   addAction = async (action) => {
@@ -161,6 +170,7 @@ export default class App extends Component {
                     addSpell={this.addSpell}
                     addAction={this.addAction}
                     resetData={this.resetData}
+                    importData={this.importData}
                   />
                 )}
               </Tab.Screen>

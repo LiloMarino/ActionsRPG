@@ -19,6 +19,11 @@ const OptionsMenu = (props) => {
           <Text style={styles.listItemText}>Adicionar Magia</Text>
         </View>
       </TouchableHighlight>
+      <TouchableHighlight onPress={() => props.importData()}>
+        <View style={styles.listOptions}>
+          <Text style={styles.listItemText}>Carregar Dados de Exemplo</Text>
+        </View>
+      </TouchableHighlight>
       <TouchableHighlight onPress={() => props.resetData()}>
         <View style={styles.listOptions}>
           <Text style={styles.listItemText}>Resetar</Text>

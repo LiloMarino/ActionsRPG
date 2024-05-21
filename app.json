@@ -27,7 +27,8 @@
     "sdkVersion": "51.0.0",
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "entryPoint": ".vscode\\exponentIndex.js"
   },
   "name": "actionsrpg"
 }
