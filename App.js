@@ -8,6 +8,7 @@ import styles from "./src/styles/styles";
 import ActionsNavScreen from "./src/ActionsNavScreen";
 import SpellsNavScreen from "./src/SpellsNavScreen";
 import { AppState, View, Image } from "react-native";
+import * as Font from "expo-font";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Tab = createMaterialBottomTabNavigator();
@@ -22,8 +23,16 @@ export default class App extends Component {
     navigationState: null,
   };
 
+  async loadFonts() {
+    await Font.loadAsync({
+      Arial: require("./assets/fonts/Arial.ttf"),
+      "Times New Roman": require("./assets/fonts/Times-New-Roman.ttf"),
+    });
+  }
+
   async componentDidMount() {
     AppState.addEventListener("change", this.handleAppStateChange);
+    this.loadFonts();
     try {
       const actionsFromStorage = await AsyncStorage.getItem("actions");
       const spellsFromStorage = await AsyncStorage.getItem("spells");
