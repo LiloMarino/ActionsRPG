@@ -15,7 +15,7 @@ const SelectTempConj = ({
         keyboardType="numeric"
         defaultValue="0"
         onChangeText={(text) => onChangeText(parseInt(text))}
-        style={[styles.input, styles.itemSelection, {height: 55}]}
+        style={[styles.input, styles.itemSelection]}
         value={valueQtd.toString()}
       />
       <Picker

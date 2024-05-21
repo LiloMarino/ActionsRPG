@@ -10,17 +10,17 @@ const OptionsMenu = () => {
   return (
     <ScrollView style={styles.background}>
       <TouchableHighlight onPress={() => navigation.navigate("Add Action")}>
-        <View style={styles.listItem2}>
+        <View style={styles.listOptions}>
           <Text style={styles.listItemText}>Adicionar Ação</Text>
         </View>
       </TouchableHighlight>
       <TouchableHighlight onPress={() => navigation.navigate("Add Spell")}>
-        <View style={styles.listItem2}>
+        <View style={styles.listOptions}>
           <Text style={styles.listItemText}>Adicionar Magia</Text>
         </View>
       </TouchableHighlight>
       <TouchableHighlight>
-        <View style={styles.listItem2}>
+        <View style={styles.listOptions}>
           <Text style={styles.listItemText}>Resetar</Text>
         </View>
       </TouchableHighlight>

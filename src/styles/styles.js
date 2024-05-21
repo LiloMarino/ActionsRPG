@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     borderBottomColor: "#4A4A4A",
     borderBottomWidth: 2,
   },
-  listItem2: {
+  listOptions: {
     paddingVertical: 25,
     paddingHorizontal: 15,
     borderBottomColor: "#4A4A4A",
