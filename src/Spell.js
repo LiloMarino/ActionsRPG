@@ -14,7 +14,9 @@ const Componentes = ({ spellComp }) => {
     if (componentes.length > 0) componentes += ", ";
     componentes += `M (${spellComp.materialTipo})`;
   }
-
+  if (componentes == "") {
+    componentes = "Nenhum"
+  }
   return componentes;
 };
 
@@ -39,10 +41,10 @@ const Spell = ({ spell }) => (
     <Markdown style={markdownStyle}>
       {`# ${spell.nome}\n*` +
         `${spell.nivel != "0" ? spell.nivel.concat("º nível") : "Cantrip"} ${spell.escola.toLowerCase()}*\n` +
-        `- **Tempo de Conjuração:** ${spell.tempo_de_conjuracao.quantidade} ${spell.tempo_de_conjuracao.unidade}\n` +
-        `- **Alcance:** ${spell.alcance}\n` +
-        `- **Componentes:** ${Componentes({spellComp: spell.componentes,})}\n` +
-        `- **Duração:** ${Duracao({spellDur: spell.duracao,})}\n` +
+        `**Tempo de Conjuração:** ${spell.tempo_de_conjuracao.quantidade} ${spell.tempo_de_conjuracao.unidade}\n` +
+        `**Alcance:** ${spell.alcance}\n` +
+        `**Componentes:** ${Componentes({spellComp: spell.componentes,})}\n` +
+        `**Duração:** ${Duracao({spellDur: spell.duracao,})}\n\n` +
         `---\n${spell.descricao}`}
     </Markdown>
   </ScrollView>
